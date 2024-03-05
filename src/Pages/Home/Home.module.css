@@ -1,6 +1,34 @@
 section {
     height: 600px;
- background-image: url(/public/imges/11.jpg);
+ background-image: url(/public/imges/4.jpg);
  background-size: cover;
  background-repeat: no-repeat;
+position: sticky;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+  .qeran {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+
   }
+  .qeran img {
+    width: 300px;
+    object-fit: cover;
+  }
+  @media screen and (max-width:347px) {
+    .qeran {
+    
+        display: flex;
+        justify-content: center;
+        height: 100px;
+    
+      }
+      .qeran img {
+        width: 200px;
+        object-fit: cover;
+      }
+}

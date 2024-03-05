@@ -1,0 +1,46 @@
+.allSign {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+ 
+    align-items: center;
+    flex-direction: column;
+}
+.oneemail {
+    width: 600px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.oneemail input {
+    height: 50px;
+    direction: rtl;
+    border-radius:15px ;
+    -webkit-border-radius:15px ;
+    -moz-border-radius:15px ;
+    -ms-border-radius:15px ;
+    -o-border-radius:15px ;
+}
+
+@media screen and (max-width:645px) {
+    .oneemail {
+        width: 400px;
+    }
+}
+@media screen and (max-width:435px) {
+    .oneemail {
+        width: 300px;
+    }  
+}
+@media screen and (max-width:344px) {
+    .oneemail {
+        width: 260px;
+    }  
+}
+@media screen and (max-width:294px) {
+    .oneemail {
+        width: 200px;
+    }  
+}

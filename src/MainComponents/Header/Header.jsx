@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./haed.css"
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark ">
