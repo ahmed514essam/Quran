@@ -1,0 +1,26 @@
+* {
+box-sizing: border-box;
+}
+.dropdown {    list-style: none;
+    color: rgb(214, 214, 214);
+    font-size: 1.5em;
+
+}
+.adaf {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.mainbav 
+{
+    background-color: rgb(56, 56, 56);
+}
+.dangereioust {
+    color: rgb(214, 214, 214);
+    font-size: 1.4em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.linkschouse {
+    font-size: 1.2em;
+    color: rgb(214, 214, 214);
+}

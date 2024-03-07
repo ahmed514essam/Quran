@@ -11,6 +11,16 @@ export default function Home() {
       </div>
       <br/>
 <SearchInput/>
+<div className={style.btnsmain}>
+
+<button>h</button>
+
+<button>h</button>
+
+<button>
+h
+</button>
+</div>
       </section>
     </>
   )
