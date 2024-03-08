@@ -1,5 +1,6 @@
 section {
-    height: 600px;
+ padding-top: 5rem;
+    height: 670px;
  background-image: url(/public/imges/4.jpg);
  background-size: cover;
  background-repeat: no-repeat;

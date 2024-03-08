@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "./Home.module.css"
 import SearchInput from './SearchInput/SearchInput'
+import QuranPage from './QurabPage/QuranPage'
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ h
 </button>
 </div>
       </section>
+
+      <QuranPage/>
     </>
   )
 }
