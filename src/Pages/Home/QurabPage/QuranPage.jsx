@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
-
+import "./quran.css" ;
 export default function QuranPage() {
 const [soraname , setSoraame] = useState([]);
 
 const getFromApi = async() => {
 
-    const res = await fetch("http://api.alquran.cloud/v1/quran/en.asad")
+    const res = await fetch("https://mp3quran.net/api/v3/suwar?language=er")
     const data = await res.json()
 
-setSoraame(data?.data || [])
-console.log(data?.data || [])
+setSoraame(data?.suwar)
+console.log(data?.suwar)
 }
 
 useEffect(() => {
@@ -18,42 +18,44 @@ getFromApi()
 
 },[])
 
-// const getResultsFromAPI = async () => {
-  
-
-//     setResults(data?.query?.search || [])
-// }
-
 
 
 
   return (
-    <>
-        <section>
-            <h2>h</h2>
+    
+        
+          
+<div className="container text-center">
+<div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
-<div >
 
-
-    <div className="container text-center bg-light">
-  <div className="row g-3">
-    <div className="col-4">
-      <div className="p-3">u</div>
+{soraname.map(item => (
+  <div className="col" >
+  <div className="contetB bg-dark text-light p-3">
+  <span>{item.makkia ? <span>مكية </span> : <span>مدنية</span>}</span>
+      <div >{item.name}</div>
     </div>
+    </div>
+))}
+
+
+   
  
-  </div>
+ 
+ 
+
+
+
+
+
+
+
 </div>
 
 
 
 
-
-</div>
-
-
-
-
-        </section>
-    </>
+      </div> 
+ 
   )
 }

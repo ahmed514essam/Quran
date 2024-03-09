@@ -6,7 +6,7 @@ import QuranPage from './QurabPage/QuranPage'
 export default function Home() {
   return (
     <>
-      <section>
+      <section className={style.sectioOne}>
       <div className={style.qeran}>
       <img   src="/public/imges/download__1_-removebg-preview.png"/>
       </div>
@@ -23,8 +23,10 @@ h
 </button>
 </div>
       </section>
-
+<section className={style.sectioTwo}>
+<h2>h</h2>
       <QuranPage/>
+      </section>
     </>
   )
 }

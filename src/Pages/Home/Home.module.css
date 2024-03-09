@@ -1,4 +1,4 @@
-section {
+.sectioOne {
  padding-top: 5rem;
     height: 670px;
  background-image: url(/public/imges/4.jpg);
@@ -32,4 +32,10 @@ position: sticky;
         width: 200px;
         object-fit: cover;
       }
+}
+
+.sectioTwo {
+
+  height:600px;
+
 }
