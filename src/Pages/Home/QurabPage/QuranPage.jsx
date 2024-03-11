@@ -5,11 +5,12 @@ const [soraname , setSoraame] = useState([]);
 
 const getFromApi = async() => {
 
-    const res = await fetch("https://mp3quran.net/api/v3/suwar?language=er")
+    const res = await fetch("https://api.alquran.cloud/v1/quran/quran-uthmani?fbclid=IwAR3eIwExTevgZklOA3-QknwpkO-1eQaPngrh97EmYYUV-8hW7_38lMcyvtM")
     const data = await res.json()
 
-setSoraame(data?.suwar)
-console.log(data?.suwar)
+setSoraame(data?.data?.surahs || [])
+console.log(data)
+console.log(data?.data?.surahs || [])
 }
 
 useEffect(() => {
@@ -31,9 +32,14 @@ getFromApi()
 
 {soraname.map(item => (
   <div className="col" >
-  <div className="contetB bg-dark text-light p-3">
-  <span>{item.makkia ? <span>مكية </span> : <span>مدنية</span>}</span>
-      <div >{item.name}</div>
+  <div className="contetB   text-light p-3">
+ 
+  <div className="adasdasd  rounded-5 "  >
+
+  <p>{item.number}</p>
+   </div>
+   
+   <diav  >{item.name}</diav>
     </div>
     </div>
 ))}
