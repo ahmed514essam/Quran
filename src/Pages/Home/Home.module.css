@@ -1,10 +1,12 @@
 .sectioOne {
  padding-top: 5rem;
     height: 670px;
- background-image: url(/public/imges/4.jpg);
+ background-image: url(/public/imges/istockphoto-803625098-612x612.jpg);
  background-size: cover;
  background-repeat: no-repeat;
-position: sticky;
+ position:relative;
+ background-attachment: fixed;
+
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -36,6 +38,15 @@ position: sticky;
 
 .sectioTwo {
 
-  height:600px;
+  height:100%;
+  background-color: rgb(29, 29, 29);
 
+}
+.sectioTwo h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+color: rgb(100, 90, 30);
+padding-top: 2rem;
 }

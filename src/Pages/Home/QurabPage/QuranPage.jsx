@@ -39,7 +39,7 @@ getFromApi()
   <p>{item.number}</p>
    </div>
    
-   <diav  >{item.name}</diav>
+   <span  >{item.name}</span>
     </div>
     </div>
 ))}

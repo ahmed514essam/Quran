@@ -1,5 +1,5 @@
 .contetB {
-background-image: url(/public/imges/0156.jpg);
+background-image: url(/public/imges/0111.webp);
 background-size: cover;
 background-repeat: no-repeat;
     border-radius: 25px;
@@ -7,11 +7,12 @@ background-repeat: no-repeat;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    
 }
 .adasdasd {
-    width: 40px;
+    width: 100%;
    height: 30px;
-    background-image: url(/public/imges/istockphoto-1629894015-612x612.jpg);
+    /* background-image: url(/public/imges/istockphoto-1762928999-612x612.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }

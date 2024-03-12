@@ -24,7 +24,7 @@ h
 </div>
       </section>
 <section className={style.sectioTwo}>
-<h2>h</h2>
+<h2>أقرأ بأسم ربك الذي خلق</h2>
       <QuranPage/>
       </section>
     </>
