@@ -2,8 +2,16 @@ import React from 'react'
 import style from "./Home.module.css"
 import SearchInput from './SearchInput/SearchInput'
 import QuranPage from './QurabPage/QuranPage'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+
+const navicate = useNavigate();
+
+const win = () => {
+navicate("/surha")
+}
+
   return (
     <>
       <section className={style.sectioOne}>
@@ -16,7 +24,7 @@ export default function Home() {
 
 <button>h</button>
 
-<button>h</button>
+<button onClick={win}>h</button>
 
 <button>
 h

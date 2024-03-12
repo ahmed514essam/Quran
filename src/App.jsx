@@ -17,9 +17,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Root/>} errorElement={<ErrorPage/>}>
   <Route path="/" element={<Home/>} />
- 
+  <Route path="/surha/:number" element={<ShowSurha/>} />
   </Route>
-  <Route path="/surha" element={<ShowSurha/>} />
+ 
       </Routes>
     </BrowserRouter>
     
