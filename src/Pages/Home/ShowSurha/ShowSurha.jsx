@@ -6,17 +6,27 @@ export default function ShowSurha() {
   const { number } = useParams();
   
 
-const [ showsurhas , setShowsurhas ] = useState([]);
+
+// const [] =useState({});
+// const [] =useState({});
+
 
 const [filterItem, setFilterItem] = useState({});
-const getFromApi = async(number) => {
+const [ filayahs , setFilayahs ] =useState({});
+const getFromApi = async(number , manzil) => {
 
   const res = await fetch("https://api.alquran.cloud/v1/quran/quran-uthmani?fbclid=IwAR3eIwExTevgZklOA3-QknwpkO-1eQaPngrh97EmYYUV-8hW7_38lMcyvtM")
   const data = await res.json()
 
   const filtered = data.data.surahs.find((item) => item.number == number);
+  const filtertoayah = filtered.ayahs ;
+  const filtoarrayah = filtertoayah.map((item) => ( `${item.number}${item.text}`)) ;
+
 setFilterItem(filtered);
-console.log(data?.data?.surahs || [])
+setFilayahs(filtertoayah);
+
+console.log(filtertoayah)
+console.log(filtoarrayah)
 }
 
 useEffect(() => {
@@ -60,9 +70,11 @@ revelationType
 
 <div className={style.divdatasurha}>
 
-<p>{filterItem.number}</p>
+<p>{filterItem.text}</p>
 
-<p>{filterItem.ayahs?.text}</p>
+
+
+{filayahs.text}
 
 </div>
 
