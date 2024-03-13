@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./quran.css" ;
+import { Link, useNavigate } from 'react-router-dom';
 export default function QuranPage() {
 const [soraname , setSoraame] = useState([]);
 
@@ -20,6 +21,8 @@ getFromApi()
 },[])
 
 
+const navicate = useNavigate();
+
 
 
   return (
@@ -32,7 +35,7 @@ getFromApi()
 
 {soraname.map(item => (
   <div className="col" >
-  <div className="contetB   text-light p-3">
+  <Link to={`/${item.number}`} className="linkcontB " > <div  className="contetB   text-light p-3">
  
   <div className="adasdasd  rounded-5 "  >
 
@@ -41,6 +44,7 @@ getFromApi()
    
    <span  >{item.name}</span>
     </div>
+    </Link>
     </div>
 ))}
 

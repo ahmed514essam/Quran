@@ -4,5 +4,22 @@
     background-size: cover;
 color: white;
 padding-top: 5rem;
-height: 600px;
+height: 100%;
+}
+.honebasmala {
+    text-align: center;
+    padding-top: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media   (max-width:381px) {
+    .honebasmala {
+     font-size: 1.3em;
+    }
+}
+.divdatasurha {
+    width: 70%;
+    margin: auto;
+    height: 100%;
+    text-align: center;
+
 }
