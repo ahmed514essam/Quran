@@ -60,7 +60,8 @@ export default function ShowSurha() {
       <h1 className={style.honebasmala}>بسم الله الرحمن الرحيم </h1>
       <div className={style.divdatasurha}>
         {filayahs.map((ayah, index) => (
-          <p key={index}> {ayah.text}</p>
+          <span className="d-block bg-danger pt-5" key={index}> {ayah.text}</span>
+        
         ))}
       </div>
     </section>

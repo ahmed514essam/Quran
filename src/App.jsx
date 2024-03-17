@@ -9,6 +9,7 @@ import Root from "./Root";
 import { BrowserRouter , Route , Routes } from "react-router-dom";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import ShowSurha from "./Pages/Home/ShowSurha/ShowSurha";
+import Radio from "./Pages/Radio/Radio";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Root/>} errorElement={<ErrorPage/>}>
   <Route path="/" element={<Home/>} />
   <Route path="/:number" element={<ShowSurha/>} />
+  <Route path="/radio" element={<Radio/>} />
   </Route>
  
       </Routes>

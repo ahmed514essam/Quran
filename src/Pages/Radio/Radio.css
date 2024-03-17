@@ -1,0 +1,22 @@
+.contetB {
+    background-image: url(/public/imges/0111.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        
+    }
+    .adasdasd {
+        width: 100%;
+       height: 30px;
+        /* background-image: url(/public/imges/istockphoto-1762928999-612x612.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+    .linkcontB {
+        list-style: none;
+        text-decoration: none;
+    }
