@@ -1,22 +1,39 @@
-.contetB {
-    background-image: url(/public/imges/0111.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-        
-    }
+.contetBb {
+        background-image: linear-gradient(180deg, rgb(1, 2 , 20), rgb(0, 0, 0));
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
     .adasdasd {
         width: 100%;
        height: 30px;
-        /* background-image: url(/public/imges/istockphoto-1762928999-612x612.jpg);
-        background-repeat: no-repeat;
-        background-size: cover; */
+       
     }
     .linkcontB {
         list-style: none;
         text-decoration: none;
+        
+    }
+    .sectionradios
+    {
+        padding-top:5rem ;
+        padding-bottom: 5rem;
+        background-image: linear-gradient(to right, rgb(58, 58, 58),rgb(32, 32, 32),rgb(41, 41, 41),rgb(41, 41, 41) , rgb(32,32, 32));
+    }
+    .sectionradios h1 {
+        padding-bottom: 3rem;
+        color: rgb(177, 177, 177);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+    }
+
+    @media (max-width:375px) {
+        .sectionradios h1 {
+           font-size: 1.2em;
+        }
+        .namereaderradios {
+            font-size: .8em;
+        }
     }

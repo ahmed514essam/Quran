@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Radio.css';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faMicrophone } from '@fortawesome/free-solid-svg-icons';
 export default function Radio() {
   const [showradios, setShowradios] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,19 +40,24 @@ export default function Radio() {
   }, [loading]);
 
   return (
+    <section className="sectionradios">
     <div className="container text-center">
-      <h1>اذاعة القرأن الكريم</h1>
+      <h1 >اذاعة القرأن الكريم</h1>
+   
       <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
         {showradios.map((item, index) => (
           <div className="col" key={index}>
             <Link to={item.url} className="linkcontB">
               <div className="contetB text-light p-3">
-                <p>{item.name}</p>
+                <span className="namereaderradios">{item.name}</span>
+                <span>  </span>
+                <FontAwesomeIcon icon={faMicrophone} />
               </div>
             </Link>
           </div>
         ))}
       </div>
     </div>
+    </section>
   );
 }
