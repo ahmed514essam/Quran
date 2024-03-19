@@ -12,6 +12,7 @@ import ShowSurha from "./Pages/Home/ShowSurha/ShowSurha";
 import Radio from "./Pages/Radio/Radio";
 import Azkar from "./Pages/Azkar/Azkar";
 import AzkarSabah from "./Pages/Azkar/AzkarSabah/AzkarSabah";
+import AzkarMasa from "./Pages/Azkar/AzkarMasa/AzkarMasa";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
   <Route path="/radio" element={<Radio/>} />
   <Route path="/Azkary" element={<Azkar/>} />
 <Route path="/azkarelsabah" element={<AzkarSabah/>}/>
+<Route path="/azkarelmasaa" element={<AzkarMasa/>} />
 
   
   </Route>

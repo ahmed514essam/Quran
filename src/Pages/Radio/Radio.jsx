@@ -14,7 +14,7 @@ export default function Radio() {
       try {
         const res = await axios.get("https://mp3quran.net/api/v3/radios");
         const data = res.data.radios;
-        console.log(data);
+      
         setShowradios(data);
         setLoading(false);
       } catch (error) {
