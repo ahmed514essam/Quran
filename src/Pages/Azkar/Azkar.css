@@ -1,0 +1,45 @@
+.sectionContetAzkarAll {
+    padding-bottom: 5rem;
+     padding-top:5rem ;
+     background-image: linear-gradient(to right, rgb(117, 117, 117),rgb(59, 59, 59),rgb(90, 90, 90),rgb(43, 43, 43) , rgb(94, 94, 94));
+height: 100vh;
+
+}
+.sectionContetAzkarAll h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+text-align: center;
+padding-bottom: 5rem;
+color: rgb(202, 202, 202);
+}
+.figure-img {
+    width: 300px;
+    height: 250px;
+}
+.spanAddressAzkar {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: rgb(3, 3, 61);
+    padding-right: 10px;
+    transition: .1s ease;
+    -webkit-transition: .1s ease;
+    -moz-transition: .1s ease;
+    -ms-transition: .1s ease;
+    -o-transition: .1s ease;
+}
+.iconarrowAzkar {
+    color: rgb(3, 3, 61);
+}
+.spanAddressAzkar:hover {
+    color: rgb(19, 19, 83);
+    padding-right: 20px;
+}
+.cotainer {
+    gap: 2rem;
+}
+.figure {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    
+}

@@ -10,6 +10,8 @@ import { BrowserRouter , Route , Routes } from "react-router-dom";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import ShowSurha from "./Pages/Home/ShowSurha/ShowSurha";
 import Radio from "./Pages/Radio/Radio";
+import Azkar from "./Pages/Azkar/Azkar";
+import AzkarSabah from "./Pages/Azkar/AzkarSabah/AzkarSabah";
 
 function App() {
 
@@ -20,6 +22,10 @@ function App() {
   <Route path="/" element={<Home/>} />
   <Route path="/:number" element={<ShowSurha/>} />
   <Route path="/radio" element={<Radio/>} />
+  <Route path="/Azkary" element={<Azkar/>} />
+<Route path="/azkarelsabah" element={<AzkarSabah/>}/>
+
+  
   </Route>
  
       </Routes>
