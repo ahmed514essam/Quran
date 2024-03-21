@@ -2,15 +2,37 @@ import React from 'react';
 import "./TalemElden.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightLong } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function TalemElden() {
+const navicate = useNavigate();
+
+const goToabadat = () => {
+  navicate("/taliameldi/abadat")
+}
+const goToquran = () => {
+  navicate("/taliameldi/qurakarim")
+}
+
+const goToSona = () => {
+  navicate("/taliameldi/sonanawia")
+}
+
+const goTomonasbat = () => {
+  navicate("/taliameldi/moasbat")
+}
+
+const goToakida = () => {
+  navicate("/taliameldi/akida")
+}
+
   return (
     <>
       <section className="sectiontalimdiall">
         <h1>تعليم الاسلام</h1>
 
         <div className="cotainere w-100 text-center row">
-          <div className="figuree col-lg-4 col-md-6 col-sm-12">
+          <div onClick={goToabadat} className="figuree col-lg-4 col-md-6 col-sm-12">
             <img src="/public/imges/salah.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare"> العبادات</span>
@@ -18,7 +40,7 @@ export default function TalemElden() {
             </figcaption>
           </div>
 
-          <div className="figuree col-lg-4 col-md-6 col-sm-12">
+          <div onClick={goTomonasbat} className="figuree col-lg-4 col-md-6 col-sm-12">
             <img src="/public/imges/mnasbat.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">المناسبات</span>
@@ -26,7 +48,7 @@ export default function TalemElden() {
             </figcaption>
           </div>
 
-          <div className="figuree col-lg-4 col-md-6 col-sm-12">
+          <div onClick={goToakida} className="figuree col-lg-4 col-md-6 col-sm-12">
             <img src="/public/imges/akidaa.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">العقيدة</span>
@@ -34,7 +56,7 @@ export default function TalemElden() {
             </figcaption>
           </div>
 
-          <div className="figuree col-lg-4 col-md-6 col-sm-12">
+          <div onClick={goToquran} className="figuree col-lg-4 col-md-6 col-sm-12">
             <img src="/public/imges/qurann.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">القرأن الكريم</span>
@@ -42,7 +64,7 @@ export default function TalemElden() {
             </figcaption>
           </div>
 
-          <div className="figuree col-lg-4 col-md-6 col-sm-12">
+          <div onClick={goToSona} className="figuree col-lg-4 col-md-6 col-sm-12">
             <img src="/public/imges/sonaa.avif" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">السنه النبويه</span>
