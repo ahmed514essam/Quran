@@ -14,6 +14,12 @@ import Azkar from "./Pages/Azkar/Azkar";
 import AzkarSabah from "./Pages/Azkar/AzkarSabah/AzkarSabah";
 import AzkarMasa from "./Pages/Azkar/AzkarMasa/AzkarMasa";
 import AzkarSala from "./Pages/Azkar/AzkarSala/AzkarSala";
+import TalemElden from "./Pages/TalemElden/TalemElden";
+import Abadat from "./Pages/TalemElden/TalemCompo/Abadat/Abadat";
+import Mnasbat from "./Pages/TalemElden/TalemCompo/Mnasbat/Mnasbat";
+import Akida from "./Pages/TalemElden/TalemCompo/Akida/Akida";
+import QuranKarim from "./Pages/TalemElden/TalemCompo/QuranKarim/QuranKarim";
+import Sona from "./Pages/TalemElden/TalemCompo/SonaNabwia/Sona";
 
 function App() {
 
@@ -28,7 +34,12 @@ function App() {
 <Route path="/azkarelsabah" element={<AzkarSabah/>}/>
 <Route path="/azkarelmasaa" element={<AzkarMasa/>} />
 <Route path="/azkarsalaa" element={<AzkarSala/>} />
-
+<Route path="/taliameldi" element={<TalemElden/>} />
+<Route path="/taliameldi/abadat" element={<Abadat/>} />
+<Route path="/taliameldi/moasbat" element={<Mnasbat/>} />
+<Route path="/taliameldi/akida" element={<Akida/>} />
+<Route path="/taliameldi/qurakarim" element={<QuranKarim/>} />
+<Route path="/taliameldi/sonanawia" element={<Sona/>} />
   
   </Route>
  
