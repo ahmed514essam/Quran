@@ -20,6 +20,7 @@ import Mnasbat from "./Pages/TalemElden/TalemCompo/Mnasbat/Mnasbat";
 import Akida from "./Pages/TalemElden/TalemCompo/Akida/Akida";
 import QuranKarim from "./Pages/TalemElden/TalemCompo/QuranKarim/QuranKarim";
 import Sona from "./Pages/TalemElden/TalemCompo/SonaNabwia/Sona";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
 <Route path="/taliameldi/akida" element={<Akida/>} />
 <Route path="/taliameldi/qurakarim" element={<QuranKarim/>} />
 <Route path="/taliameldi/sonanawia" element={<Sona/>} />
+<Route path="/contactus" element={<ContactUs/>} />
   
   </Route>
  

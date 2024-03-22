@@ -1,0 +1,95 @@
+.sectioncontact {
+    background-image: linear-gradient(to right, rgb(58, 58, 58),rgb(32, 32, 32),rgb(41, 41, 41),rgb(41, 41, 41) , rgb(32,32, 32));
+padding-bottom: 5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+  padding-top: 5rem;
+}
+.sectioncontact p {
+    text-align: center;
+    color: rgb(231, 231, 231);
+    width: 90%;
+    margin: auto;
+}
+.contentAboutForm {
+    width: 70%;
+    margin: auto;
+}
+.contentAboutForm form {
+    width: 100%;
+   
+}
+.eachinput {
+  display: flex;
+ 
+    
+    margin-bottom: 1rem;
+
+}
+
+.eachinput label {
+    color: rgb(231, 231, 231);
+   width: 20%;
+  
+
+}
+@media (max-width:500px) {
+    .eachinput {
+        flex-direction: column;
+    }
+    .eachinput label {
+        width: 100%;
+    }
+    
+}
+.eachinput input {
+    width: 100%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.eachinpute {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.eachinpute textarea {
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.contentbtns {
+    
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+.contentbtns button {
+    padding: 5px 10px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+}
+.btnsreset {
+background-color: rgb(167, 91, 91);
+
+}
+.btnsdone {
+    background-color: rgb(5, 70, 48);
+}
