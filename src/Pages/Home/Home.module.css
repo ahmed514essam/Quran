@@ -50,3 +50,51 @@
 color: rgb(100, 90, 30);
 padding-top: 2rem;
 }
+.btnsmain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70%;
+}
+.btnsmain button {
+ padding: 10px 15px;
+ border: none;
+ font-size: 1.2em;
+ border-radius:10px ;
+ -webkit-border-radius:10px ;
+ -moz-border-radius:10px ;
+ -ms-border-radius:10px ;
+ -o-border-radius:10px ;
+ background-image: url(/public/imges/0152.jpg);
+ color: white;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+@media (max-width:554px) {
+
+  .btnsmain {
+
+  width: 100%;
+}
+.btnsmain button {
+ padding: 7px 12px;
+ border: none;
+ font-size:1em;
+
+}
+}
+@media (max-width:360px) {
+  .btnsmain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    width: 70%;
+  }
+  .btnsmain button {
+   padding: 10px 15px;
+
+   font-size: 1.2em;
+
+  }
+}

@@ -8,7 +8,7 @@ height: 100%;
 }
 .honebasmala {
     text-align: center;
-    padding-top: 2rem;
+
     font-family: 'Courier New', Courier, monospace;
 }
 @media   (max-width:381px) {
@@ -20,6 +20,25 @@ height: 100%;
     width: 70%;
     margin: auto;
     height: 100%;
-    text-align: center;
+ text-align: center;
+    direction: rtl;
+   
+    
+}
+.numberayahs {
+       background-color: aliceblue;
+       color: black;
+      padding: 4px 5px 4px 5px;
+       border-radius:25px ;
+       -webkit-border-radius:25px ;
+       -moz-border-radius:25px ;
+       -ms-border-radius:25px ;
+       -o-border-radius:25px ;
+       font-weight: 600;
+       margin-right: 5px;
+}
+.contetOfAyahs {
+    display: inline-block;
+    direction: ltr;
 
 }

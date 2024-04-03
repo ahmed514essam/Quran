@@ -19,17 +19,20 @@ navicate("/surha")
       <img   src="/public/imges/download__1_-removebg-preview.png"/>
       </div>
       <br/>
-<SearchInput/>
+
 <div className={style.btnsmain}>
 
-<button>h</button>
+<button>القرأن الكريم</button>
 
-<button onClick={win}>h</button>
+<button>الأذكار</button>
 
-<button>
-h
-</button>
+<button>الراديو</button>
+
+<button>تعليم </button>
+
+
 </div>
+<SearchInput/>
       </section>
 <section className={style.sectioTwo}>
 <h2>أقرأ بأسم ربك الذي خلق</h2>

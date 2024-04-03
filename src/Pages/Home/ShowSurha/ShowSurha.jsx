@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import style from "./ShowSurha.module.css";
-import axios from 'axios';
+import surahs from "../../../surahs.json"
 import { useParams } from 'react-router-dom';
 
 // Mapping object for translation
@@ -18,27 +18,25 @@ export default function ShowSurha() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const getFromApi = async () => {
-      try {
-        const res = await axios.get("https://api.alquran.cloud/v1/quran/quran-uthmani");
-        const data = res.data.data;
-        const filteredSurah = data.surahs.find((item) => item.number === parseInt(number));
+    const handleCategoryFilter = (surnumber) => {
+      const filteredSurah = surahs.data.surahs.find((surah) => surah.number == surnumber);
+      if (filteredSurah) {
         setFilterItem(filteredSurah);
         setFilayahs(filteredSurah.ayahs);
         setLoading(false);
-      } catch (error) {
-        setError(error);
+        setError(null);
+      } else {
         setLoading(false);
+        setError(new Error('Surah not found'));
       }
     };
 
-    getFromApi();
+    handleCategoryFilter(number);
   }, [number]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  // Function to translate the revelation type to Arabic
   const translateRevelationType = (type) => {
     return revelationTypes[type] || type;
   };
@@ -53,15 +51,13 @@ export default function ShowSurha() {
           <h6>{filterItem.name}</h6>
         </div>
         <div>
-          {/* Translate the revelation type */}
           <p>{translateRevelationType(filterItem.revelationType)}</p>
         </div>
       </nav>
       <h1 className={style.honebasmala}>بسم الله الرحمن الرحيم </h1>
       <div className={style.divdatasurha}>
-        {filayahs.map((ayah, index) => (
-          <span className="d-block bg-danger pt-5" key={index}> {ayah.text}</span>
-        
+        {filterItem.ayahs.map((ayah, index) => (
+          <p className={style.contetOfAyahs} key={index}><span className={style.numberayahs}>{ayah.numberInSurah}</span> {ayah.text}  </p>
         ))}
       </div>
     </section>

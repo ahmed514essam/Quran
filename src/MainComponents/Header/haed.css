@@ -28,3 +28,6 @@ box-sizing: border-box;
     font-size: 1.2em;
     color: rgb(214, 214, 214);
 }
+.form-control {
+    direction: rtl;
+}

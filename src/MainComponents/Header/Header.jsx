@@ -2,9 +2,12 @@ import React from 'react'
 import "./haed.css"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars ,faEnvelope ,faUser ,faGlobe ,faHouse ,faMicrophone} from '@fortawesome/free-solid-svg-icons';
+import { faGear ,faEnvelope ,faUser ,faGlobe ,faHouse ,faMicrophone} from '@fortawesome/free-solid-svg-icons';
+
 export default function Header() {
   return (
+<>
+
     <nav className="mainbav navbar navbar-expand-lg  ">
     <div className="container-fluid">
     <div className="adaf">
@@ -14,7 +17,8 @@ export default function Header() {
 
       <li className="nav-item dropdown">
             <Link className="lisstye nav-link toggle "  role="button" data-bs-toggle="dropdown"  aria-expanded="false">
-            <FontAwesomeIcon icon={faBars} />
+            {/* <FontAwesomeIcon icon={faGear} /> */}
+            <FontAwesomeIcon icon={faGlobe} /> 
             </Link>
             <ul className="dropdown-menu">
               <li><Link className="dropdown-item" href="#">حسابي</Link></li>
@@ -31,7 +35,7 @@ export default function Header() {
     </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <Link className="linkschouse nav-link " aria-current="page" href="#">
             <FontAwesomeIcon icon={faHouse} /> 
@@ -53,9 +57,12 @@ export default function Header() {
             </Link>
           </li>
         </ul>
-     
+        <form className="d-flex" role="search">
+        <input  className="form-control me-2" type="search" placeholder="  ماذا تريد ان تقرأ" aria-label="Search"/>
+      </form>
       </div>
     </div>
   </nav>
+  </>
   )
 }
