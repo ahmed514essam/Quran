@@ -1,14 +1,15 @@
 .seconesurha {
-    background-image: url(/public/imges/istockphoto-1762928999-612x612.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(/public/imges/sqare.webp);
+    background-repeat: repeat;
+  
 color: white;
 padding-top: 5rem;
 height: 100%;
 }
 .honebasmala {
     text-align: center;
-
+padding-bottom: 1.5rem;
+padding-top: 2rem;
     font-family: 'Courier New', Courier, monospace;
 }
 @media   (max-width:381px) {
@@ -16,14 +17,23 @@ height: 100%;
      font-size: 1.3em;
     }
 }
+@media   (max-width:368px) {
+  .nameOfSurahss {
+    font-size: .9em;
+  }
+  .lengthSurahs {
+    font-size: .89em;
+  }
+}
 .divdatasurha {
     width: 70%;
     margin: auto;
     height: 100%;
  text-align: center;
     direction: rtl;
-   
-    
+ line-height: 20px;
+
+
 }
 .numberayahs {
        background-color: aliceblue;
@@ -36,9 +46,14 @@ height: 100%;
        -o-border-radius:25px ;
        font-weight: 600;
        margin-right: 5px;
+       margin-left: 5px;
+       background-color: rgb(58, 10, 10);
+       color: rgb(212, 212, 212);
+       font-family: 'Courier New', Courier, monospace;
 }
 .contetOfAyahs {
     display: inline-block;
     direction: ltr;
+    line-height: 30px;
 
 }

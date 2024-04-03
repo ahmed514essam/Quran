@@ -1,13 +1,14 @@
 .contetB {
-background-image: url(/public/imges/0111.webp);
+/* background-image: url(/public/imges/0111.webp);
 background-size: cover;
-background-repeat: no-repeat;
+background-repeat: no-repeat; */
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    
+    /* border: 2px solid  rgb(32, 57, 75); */
+background-color: rgb(56, 69, 82);
 }
 .adasdasd {
     width: 100%;
