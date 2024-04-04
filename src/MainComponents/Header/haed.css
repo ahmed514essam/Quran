@@ -31,17 +31,47 @@ box-sizing: border-box;
 .form-control {
     direction: rtl;
 }
-.sectiononebigscreen {
-    display: none;
+.mainheads {
+    display:none;
 }
-
-@media (max-width:800px) {
-    .sectiontwosmaalscreen {
+.sectiosup {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.listsup  {
 display: none;
+}
+@media (max-width:800px) {
+    
+    .mainheads {
+        display:flex;
+        flex-direction: column;
     }
-    .sectiononebigscreen {
-        display: flex;
-        scroll-behavior: smooth;
+    .sectiosup {
+        display: none;
+       
     }
+    .listsup  {
+        display:block;
+        }
+        .listmain {
+            display: none;
+        }
 
+}
+.space {
+    padding-left: 5px;
+}
+.coloricon {
+    color: rgb(69, 88, 17);
+}
+.coloricone {
+    color: rgb(1, 1, 100);
+}
+.coloriconee {
+    color: rgb(59, 19, 97);
+}
+.coloricones {
+    color: rgb(0, 58, 0);
 }

@@ -3,12 +3,13 @@ import "./haed.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEllipsisVertical,
+  faList,
   faEnvelope,
   faUser,
   faGlobe,
   faHouse,
   faMicrophone,
+  faMessage ,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
@@ -32,9 +33,10 @@ export default function Header() {
                 aria-expanded="false"
               >
                 {/* <FontAwesomeIcon icon={faGear} /> */}
-                <FontAwesomeIcon icon={faEllipsisVertical} />
+                <FontAwesomeIcon icon={faList} />
               </Link>
               <ul className="dropdown-menu">
+              <span className="listmain">
                 <li>
                   <Link className="dropdown-item" href="#">
                     حسابي
@@ -63,63 +65,61 @@ export default function Header() {
                     الصفحة الرئيسية
                   </Link>
                 </li>
+</span>
+<span className="listsup">
+
+           
+                <li>
+                  <Link className="dropdown-item" href="#">
+                  <FontAwesomeIcon className="coloricone" icon={faUser} />
+                  <span className="space">     حسابي </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                  <FontAwesomeIcon className="coloricones" icon={faGlobe} />
+                  <span className="space">  اللغة </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                  <FontAwesomeIcon className="coloriconee" icon={faMessage} />
+                    <span className="space"> تواصل معنا </span>
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+            
+                <li>
+                  <Link className="dropdown-item" href="#">
+                  <FontAwesomeIcon className="coloricon" icon={faHouse} />
+                  <span className="space">  الصفحة الرئيسية </span>
+                  </Link>
+                </li>
+</span>
+
               </ul>
             </li>
           </div>
           <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="sectiononebigscreen collapse navbar-collapse" id="navbarSupportedContent">
-        
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link
-                  className="linkschouse nav-link "
-                  aria-current="page"
-                  href="#"
-                >
-                  <FontAwesomeIcon icon={faHouse} />الاذكار
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                  <FontAwesomeIcon icon={faUser} />القران 
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                  <FontAwesomeIcon icon={faGlobe} />تعليم
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                  <FontAwesomeIcon icon={faEnvelope} />راديو
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                  <FontAwesomeIcon icon={faEnvelope} />حسابي
-                </Link>
-              </li>
-            </ul>
-          </div>
+          className="navbar-toggler ml-auto" // Add ms-auto class here
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+         
 
 
-{/* ============================================================================ */}
 
-<div className=" sectiontwosmaalscreen collapse navbar-collapse" id="navbarSupportedContent">
+<div className="  collapse navbar-collapse" id="navbarSupportedContent">
 <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+<span className="sectiosup">
               <li className="nav-item">
                 <Link
                   className="linkschouse nav-link "
@@ -146,6 +146,53 @@ export default function Header() {
                   <FontAwesomeIcon icon={faEnvelope} />
                 </Link>
               </li>
+</span>
+
+              
+<span className="mainheads">
+
+<li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>الصفحة الرئيسية</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>حسابي</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>القرأن الكريم</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>الأذكار</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>الراديو</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="linkschouse nav-link" href="#">
+                <span>تعاليم الاسلام</span>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              </li>
+</span>
             </ul>
 
             <form className="d-flex" role="search">
