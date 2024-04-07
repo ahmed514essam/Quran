@@ -1,101 +1,77 @@
-import React, { useState } from 'react'
-import "./ContactUs.css"
-export default function ContactUs() {
+import React, { useState } from 'react';
+import './ContactForm.css';
 
-    const [ myname , setMyname ] = useState();
-    const [ myemail , setMyemail ] = useState();
-    const [ mycity , setMycity ] = useState();
-    const [ area , setArea ] = useState();
+const ContactForm = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
 
-    const contactForm = () => {
-
-        e.preventDefault()
-    
-        const emailMessage = getEmailMessage({
-    
-           
-    
-            myname: myname,
-            myemail: myemail,
-            mycity: mycity ,
-            area: area,
-    
-    
-    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Send email using fetch API
+        fetch("https://sendmail-api-docs.vercel.app/api/send", {
+            method: "POST",
+            body: JSON.stringify({
+                to: "ahmedessaam124@gmail.com",
+                subject: `Message from ${formData.name}`,
+                message: formData.message,
+            })
         })
-  
-
-
-    fetch("https://sendmail-api-docs.vercel.app/api/send", {
-        method: "POST",
-        body: JSON.stringify({
-            to: "ahmedessaam124@gmail.com", 
-            subject: "Message about Quran Project",
-            message: emailMessage,
-        })
-    })
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            setMyname = ""
-            setMyemail = ""
-            setMycity = ""
-            setArea = ""
-        })
-    }
+        .then(data => console.log(data))
+        // You can add error handling here
+    };
 
-        const getEmailMessage = ({ myname, myemail , mycity , area } = {}) => {
-            return `
-                <p>You have received a new message from your contact form website:</p>
-                <div style="background-color: #101010; color: #fbfbfb; padding: 12px">
-                    <p style="margin: 0;">Name: ${myname}</p>
-                    <p style="margin: 12px 0;">Email: ${myemail}</p>
-                    <p style="margin: 12px 0;">City: ${mycity}</p>
-                    <p style="margin: 0;">suggestion: ${area}</p>
+    return (
+        <div className="contact-form-container">
+            <h2>Contact Us</h2>
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-            `
-        }
+                <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    );
+};
 
-
-  return (
-    <section className="sectioncontact">
-<h1 className="text-center text-light pb-5"> Contact Us</h1>
-<p className="pb-5">We are pleased with your support or suggestions to improve the site, and therefore we have provided you with a form to express your opinion</p>
-
-<div className="contentAboutForm">
-<form >
-
-<div className="eachinput">
-    <label for="name">Name</label>
-    <input value={myname} type="text" id="name" />
-</div>
-
-<div className="eachinput">
-    <label for="email"> Email</label>
-    <input value={myemail} type="email" id="email" required/>
-</div>
-
-<div className="eachinput">
-    <label for="city">City</label>
-    <input value={mycity} type="text" id="city" />
-</div>
-
-
-
-<div className="eachinpute">
-    
-    <textarea value={area}  placeholder="What are your suggestions?"  required/>
-</div>
-
-<div className="contentbtns">
-    <button  className="btnsreset">Reset</button>
-<button onClick={contactForm} className="btnsdone">Done</button>
-</div>
-</form>
-</div>
-
-
-    </section>
-  )
-}
+export default ContactForm;
