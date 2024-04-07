@@ -3,19 +3,22 @@ import "./haed.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faList,
+  faBars ,
+  
+  
   faEnvelope,
   faUser,
   faGlobe,
   faHouse,
-  faMicrophone,
+  faMagnifyingGlass,
+  faGear,
   faMessage ,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
     <>
-      <nav className="mainbav navbar navbar-expand-lg  ">
+      <nav className="mainbav navbar navbar-expand-lg navbar navbar-expand-lg navbar-light  ">
         <div className="container-fluid">
           <div className="adaf">
             <Link
@@ -25,15 +28,16 @@ export default function Header() {
               Quran
             </Link>
 
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown ">
               <Link
                 className="lisstye nav-link toggle "
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                {/* <FontAwesomeIcon icon={faGear} /> */}
-                <FontAwesomeIcon icon={faList} />
+                <FontAwesomeIcon className="ters" icon={faGear} />
+              
+                <FontAwesomeIcon className="lists" icon={faBars} />
               </Link>
               <ul className="dropdown-menu">
               <span className="listmain">
@@ -103,7 +107,7 @@ export default function Header() {
             </li>
           </div>
           <button
-          className="navbar-toggler ml-auto" // Add ms-auto class here
+          className="navbar-toggler collapsed ms-auto" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -111,7 +115,11 @@ export default function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+    
+
+          <span className="toggler-icon top-bar"></span>
+        <span className="toggler-icon middle-bar"></span>
+        <span className="toggler-icon bottom-bar"></span>
         </button>
          
 
@@ -149,53 +157,74 @@ export default function Header() {
 </span>
 
               
-<span className="mainheads">
+<span className="mainheads pt-3">
 
 <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>الصفحة الرئيسية</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/home-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">الصفحة الرئيسية</span>
+                
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>حسابي</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/account-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">حسابي</span>
+                 
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>القرأن الكريم</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/quran-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">القرأن الكريم</span>
+                
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>الأذكار</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/azkary-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">الأذكار</span>
+               
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>الراديو</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/radio-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">الراديو</span>
+                 
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="linkschouse nav-link" href="#">
-                <span>تعاليم الاسلام</span>
-                  <FontAwesomeIcon icon={faGlobe} />
+                <div className="imgList">
+                  <img src="/public/list imges/islam-removebg-preview.png"/>
+                </div>
+                <span className="nameOfList">تعاليم الاسلام</span>
+            
                 </Link>
               </li>
 </span>
             </ul>
 
-            <form className="d-flex" role="search">
+            <form className=" forminput d-flex " role="search">
+            <button>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
               <input
                 className="form-control me-2"
                 type="search"
