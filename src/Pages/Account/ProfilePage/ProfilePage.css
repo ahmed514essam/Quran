@@ -1,0 +1,92 @@
+.mainSection {
+    padding-top:5rem ;
+    background-image: url(/public/imges/saba.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.trueLink {
+    width: 50%;
+margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-bottom: 1rem;
+}
+.trueLink button {
+    
+    font-weight: 600;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.haveAcc {
+    padding-bottom: 3rem;
+
+}
+.haveAcc .linkHave {
+    text-decoration: none;
+    color: rgb(175, 180, 180);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.haveAcc .linkHave:hover {
+    color: rgb(16, 119, 47);
+}
+.btncon {
+    
+    padding: 5px 5px ;
+    background-color: rgb(180, 161, 50); transition: .3s ease; -webkit-transition: .3s ease; -moz-transition: .3s ease; -ms-transition: .3s ease; -o-transition: .3s ease;
+}
+.btnres {
+    padding: 5px 5px ;
+    background-color: brown;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+.btncon:hover , .btnres:hover {
+    opacity: 80%;
+}
+@media (max-width:400px) {
+    .haveAcc {
+
+    }
+    .trueLink {
+        flex-direction: column;
+
+    }
+    .trueLink .btncon {
+        margin-bottom: 1rem;
+    }
+}
+.log {  padding: 6px 10px; background-color: rgb(19, 87, 36); transition: .3s ease; -webkit-transition: .3s ease; -moz-transition: .3s ease; -ms-transition: .3s ease; -o-transition: .3s ease;
+}
+.log:hover {
+    opacity: 80%;
+}
+.lnk {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: rgb(211, 24, 11);
+}
+.create {
+text-decoration: none;
+font-size: 1.1;
+font-weight: 500;
+color: bisque;
+}
+.crediv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
