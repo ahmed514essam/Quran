@@ -26,11 +26,7 @@ const clicksubbt = () => {
 {page ? (
     <>
    <Register/>
-   <div className="trueLink">
-<button className="btncon">Confirm</button>
-<button className="btnres">Reset</button>
-
-   </div>
+ 
    <div className="haveAcc w-100 text-center">
    <Link onClick={clicksubbtn} className="linkHave"> Already have Account</Link>
    </div>
@@ -38,13 +34,7 @@ const clicksubbt = () => {
 ) : (
 <>
 <LogIn/>
-<div className="trueLink">
 
-<button className="log">Log In</button>
-
-<Link className="lnk"> Forget Password </Link>
-
-</div>
 <span className="crediv">
 <Link onClick={clicksubbt} className="create">Create Account</Link>
 </span>

@@ -1,0 +1,109 @@
+
+.allDivsInputs {
+    height: 100%;
+    width: 100%;
+margin: auto;
+   padding-top: 2rem;
+    
+}
+.allDivsInputs form {
+width:50%;
+margin: auto;
+cursor:pointer;
+
+}
+.divEachIn {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+.divEachIn label {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.sectionRegister h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.divEachIn input {
+  height: 40px;
+    
+}
+
+.RowInput {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+@media (max-width:800px) {
+    .RowInput {
+        flex-direction: column;
+
+    }
+ 
+
+}
+
+.trueLink {
+    width: 50%;
+margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-bottom: 1rem;
+}
+.trueLink button {
+    
+    font-weight: 600;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+@media (max-width:391px) {
+    .allDivsInputs form {
+        width:80%;
+        margin: auto;
+        cursor:pointer;
+        
+        }
+}
+.nclasinput {
+    border: 2px solid red;
+}
+.btncon {
+    
+    padding: 5px 5px ;
+    background-color: rgb(180, 161, 50); transition: .3s ease; -webkit-transition: .3s ease; -moz-transition: .3s ease; -ms-transition: .3s ease; -o-transition: .3s ease;
+}
+.btnres {
+    padding: 5px 5px ;
+    background-color: brown;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+.btncon:hover , .btnres:hover {
+    opacity: 80%;
+}
+@media (max-width:400px) {
+    .haveAcc {
+
+    }
+    .trueLink {
+        flex-direction: column;
+
+    }
+    .trueLink .btncon {
+        margin-bottom: 1rem;
+    }
+}
