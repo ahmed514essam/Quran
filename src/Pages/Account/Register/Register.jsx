@@ -24,27 +24,7 @@ export default function Register() {
     }));
   };
 
-const [errEmail , setErrEmail] = useState();
 
-let email = formData.email ;
-// let email = formData.email ;
-// let email = formData.email ;
-// let email = formData.email ;
-// let email = formData.email ;
-
-  function getEmailErrors(email = "") {
-    const errors = [], EMAIL_REGEX_PATTERN = /^[a-z]\w{2,}@\w{2,}\.\w{2,}$/
-    if(email.trim().length === 0) {
-        errors.push("Email can't be empty")
-        setErrEmail("Nooo")
-    }
-    if(!EMAIL_REGEX_PATTERN.test(email)){
-        errors.push("Email must be valid")
-    }
-
-    return errors ;
-}
- 
 
   return (
     <section className="sectionRegister">
@@ -63,8 +43,8 @@ let email = formData.email ;
           </div>
           <div className="divEachIn">
             <label htmlFor="email">Email</label>
-            <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} />
-        <span>{errEmail}</span>
+            <input id="email" type="email"    name="email" value={formData.email} onChange={handleChange} />
+        
           </div>
           <div className="RowInput">
             <div className="divEachIn">
