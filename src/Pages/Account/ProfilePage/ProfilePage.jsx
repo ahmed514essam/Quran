@@ -4,9 +4,9 @@ import LogIn from '../LogIn/LogIn';
 import Register from '../Register/Register';
 import { Link } from 'react-router-dom';
 
-export default function ProfilePage() {
+export default function ProfilePage({ setDisplay }) {
 
-const [ page , setPage ] = useState(false);
+const [ page , setPage ] = useState(true);
 
 
 const clicksubbtn = () => {
@@ -25,7 +25,7 @@ const clicksubbt = () => {
 
 {page ? (
     <>
-   <Register/>
+   <Register setDisplay={setDisplay} />
  
    <div className="haveAcc w-100 text-center">
    <Link onClick={clicksubbtn} className="linkHave"> Already have Account</Link>
@@ -33,7 +33,7 @@ const clicksubbt = () => {
    </>
 ) : (
 <>
-<LogIn/>
+<LogIn setDisplay={setDisplay}/>
 
 <span className="crediv">
 <Link onClick={clicksubbt} className="create">Create Account</Link>

@@ -22,6 +22,8 @@ import QuranKarim from "./Pages/TalemElden/TalemCompo/QuranKarim/QuranKarim";
 import Sona from "./Pages/TalemElden/TalemCompo/SonaNabwia/Sona";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import ProfilePage from "./Pages/Account/ProfilePage/ProfilePage";
+import RegisterTwo from "./Pages/Account/Register/RegisterTwo";
+import MyAcc from "./Pages/Account/MyAcc/MyAcc";
 
 function App() {
 
@@ -43,8 +45,8 @@ function App() {
 <Route path="/taliameldi/qurakarim" element={<QuranKarim/>} />
 <Route path="/taliameldi/sonanawia" element={<Sona/>} />
 <Route path="/contactus" element={<ContactUs/>} />
-<Route path="/account" element={<ProfilePage/>} />
-  
+<Route path="/account" element={<MyAcc/>} />
+
   </Route>
  
       </Routes>
