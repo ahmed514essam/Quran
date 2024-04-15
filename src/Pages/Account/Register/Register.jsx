@@ -54,6 +54,16 @@ localStorage.setItem("Data" , JSON.stringify(userData));
 
 
   }
+
+const resetdata =()=> {
+  setAge == "" ,
+  setConpass == "" ,
+  setEmail == "" ,
+  setFname == "" ,
+  setLname == "" ,
+  setPass == ""
+}
+
 const falsealert = () => {
   setAlert(false)
 }
@@ -100,8 +110,8 @@ const falsealert = () => {
             <input id="age" name="age" value={age} onChange={(e) => setAge(e.target.value)} />
           </div>
           <div className={styles.trueLink}>
-<button onClick={handleConfirm} className={styles.btncon}>Confirm</button>
-<button className={styles.btnres}>Reset</button>
+<button type="submit" onClick={handleConfirm} className={styles.btncon}>Confirm</button>
+<button onClick={resetdata} className={styles.btnres}>Reset</button>
 
    </div>
 

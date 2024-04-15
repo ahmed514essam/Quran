@@ -7,7 +7,7 @@ export default function RegisterTwo({ setDisplay }) {
     const [userData, setUserData] = useState({});
     const [userPage, setUserPage] = useState(true);
     const [ done , setDone ] = useState('');
-
+const [ meser , setMeser] = useState('');
     useEffect(() => {
         const getCoEmail = localStorage.getItem("Data");
 
@@ -55,9 +55,11 @@ const sendtr = (e) => {
     }
 const sureEmail = () => {
     if (done == "251026" || done == "511202") {
-        setDisplay(true)
+        setDisplay(true);
 
-    }else null
+    }else {
+        setMeser("Email Or Password Incorrect")
+    }
 }
     return (
         <>
@@ -90,6 +92,7 @@ value={done}
 onChange={(e) => setDone(e.target.value)}
 placeholder="Enter Code"
               />
+              <p className="text-center text-danger">{meser}</p>
                     <div className={styles.divBtnsRe}>
                         <button onClick={sureEmail}>Confirm</button>
 
