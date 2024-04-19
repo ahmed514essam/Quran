@@ -33,6 +33,23 @@
     margin-bottom: 20px;
   }
 }
+.contentfalse {
+  width: 99%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.likgo {
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(160, 160, 160);
+
+}
+.likgo:hover {
+  color: burlywood;
+}
 .btnss {
   background-color: rgb(87, 77, 34);
   text-decoration: none;
