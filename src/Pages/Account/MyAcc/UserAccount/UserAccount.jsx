@@ -43,28 +43,30 @@ export default function UserAccount({ setDisplay }) {
               <Avatar />
             </div>
             <div className={style.contetInfo}>
-              <h1> {userData.fname} مرحبا</h1>
-              <span>كيف حالك  ياعزيزي</span>
+              <h1><span className={style.spanhighlight}>{userData.fname}</span>  مرحبا</h1>
+              <span>   كيف حالك  ياعزيزي | عزيزتي</span>
               <p>
-                من اجل انك انضممت الينا سأقدم لك مكبتي تتيح لك تحميل كتب
+                من اجل انك انضممت الينا سأقدم لك مكتبتي تتيح لك تحميل بعض الكتب
               </p>
-              <h2>My Profile</h2>
+              <h2 className={style.header2prof}>My Profile</h2>
               <p>
               <p>
               Name : {""}
+              <span className={style.spanhighlight}>
                 <span className="fst-italic">
                   {userData.fname} {userData.lname}
                 </span>
+                </span>
                </p>
               </p>
-              <p>Email : {userData.email}</p>
-              <p >Age : {userData.age}</p>
-              <p>password : {userData.pass}</p>
+              <p>Email : <span className={style.spanhighlight}>{userData.email}</span></p>
+              <p >Age : <span className={style.spanhighlight}>{userData.age}</span></p>
+              <p>password : <span className={style.spanhighlight}>{userData.pass}</span></p>
             </div>
-            <div className="btnAcc d-flex m-2">
+            <div className={style.btnall}>
               <button
                 onClick={btnremoval}
-                className="bg-danger text-light p-2 fw-bold border-0 rounded"
+                className={style.btnremov}
               >
                 Remove Account
               </button>

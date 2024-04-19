@@ -1,0 +1,57 @@
+.carde {
+  width: 150px;
+}
+
+.contentAllT {
+  width: 100%;
+  padding-top: 2rem;
+  background-image: url(/public/imges/saba.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 3rem;
+}
+.card-title {
+  color: white;
+  font-size: 1em;
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+.contentAllT h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(194, 194, 194);
+}
+
+.carde-group {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+}
+
+@media (max-width: 683px) {
+  .carde {
+    width: calc(50% - 20px); 
+    margin-bottom: 20px;
+  }
+}
+.btnss {
+  background-color: rgb(87, 77, 34);
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+.btnss:hover {
+background-color: white;
+border: 2px solid rgb(87, 77, 34);
+color: rgb(87, 77, 34);
+font-weight: 600;
+}

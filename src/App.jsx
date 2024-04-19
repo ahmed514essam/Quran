@@ -24,6 +24,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import ProfilePage from "./Pages/Account/ProfilePage/ProfilePage";
 import RegisterTwo from "./Pages/Account/Register/RegisterTwo";
 import MyAcc from "./Pages/Account/MyAcc/MyAcc";
+import BookLIb from "./Pages/Account/BookLibrary/BookLIb";
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
 <Route path="/taliameldi/sonanawia" element={<Sona/>} />
 <Route path="/contactus" element={<ContactUs/>} />
 <Route path="/account" element={<MyAcc/>} />
-
+<Route path="library" element={<BookLIb/>} />
   </Route>
  
       </Routes>

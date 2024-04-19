@@ -1,58 +1,54 @@
-import React, { useState } from 'react'
-import AvatarEditor from 'react-avatar-editor'
-
+import React, { useEffect, useState } from 'react';
+import style from "./Avatar.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPlus } from '@fortawesome/free-solid-svg-icons';
 export default function Avatar() {
+  const [image, setImage] = useState(null);
+  const [imageName, setImageName] = useState("");
+  const [ user , setUser] = useState(false);
+
+  const handleImageChange = (e) => {
+    console.log("Image selected");
+    const file = e.target.files[0];
+    setImage(file);
+    setImageName(file.name);
+  };
+
+useEffect(() => {
+if (image){
+  setUser(true)
+}
+else {
+  setUser(false)
+}
 
 
-    const [image, setImage] = useState(null);
-    const [editedImage, setEditedImage] = useState(null);
-    const [scale, setScale] = useState(1);
-    const [editor, setEditor] = useState(null);
+}, [])
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        setImage(file);
-      };
-    
-      const handleScaleChange = (e) => {
-        const scale = parseFloat(e.target.value);
-        setScale(scale);
-      };
-
-      const handleSave = () => {
-        if (editor) {
-          const canvas = editor.getImage();
-      
-          setEditedImage(canvas.toDataURL());
-        }
-      };
 
   return (
-    <div>
-    <input type="file" onChange={handleImageChange} accept="image/*" />
-    {image && (
-      <div>
-        <AvatarEditor
-          ref={(ref) => setEditor(ref)}
-          image={image}
-          width={250}
-          height={250}
-          border={50}
-          scale={scale}
-          onImageChange={() => setEditedImage(null)}
-        />
-        <input
-          type="range"
-          value={scale}
-          min="1"
-          max="2"
-          step="0.01"
-          onChange={handleScaleChange}
-        />
-        <button onClick={handleSave}>Save</button>
-      </div>
+    <div className={style.allavatares}>
+    <div className={style.divimge}>
+    {image ? (
+       <img src={URL.createObjectURL(image)} alt="user photo" />
+    ) : (
+
+      <img src="/public/imges/user.jfif"/>
     )}
-    {editedImage && <img src={editedImage} alt="Profile" />}
-  </div>
-  )
+    
+    </div>
+    
+      <label htmlFor="fileInput" className={style.customFileInput}>
+        <span><FontAwesomeIcon icon={faPlus} /></span> Photo
+      </label>
+      <input
+        type="file"
+        id="fileInput"
+        className={style.inputFile}
+        onChange={handleImageChange}
+        accept="image/*"
+      />
+    
+    </div>
+  );
 }
