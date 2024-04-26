@@ -1,50 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
 .footer {
-    background-color: rgb(22, 25, 27);
-    bottom: 0;
-    right: 0;
-    left: 0; 
+  padding-top: 5rem;
+  bottom: 0;
+  right: 0;
+  left: 0; 
+  background-color: rgb(22, 25, 27);
+  color: white;
+  bottom: 0;
 }
+
 .end {
-    background-color: rgb(22, 25, 27);
-    
-    right: 0;
-    left: 0; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+  top: 0;
+  padding-bottom: 5rem;
+  right: 0;
+  left: 0; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  
 }
+
 .akra {
-    color: rgb(189, 128, 85);
+  color:  rgb(196, 169, 35);
 }
+
 .imgessss img {
-    object-fit: cover;
-    width: 120px;
-    display: inline;
+  object-fit: cover;
+  width: 100px;
+  display: inline;
 }
+
 .imgessss {
-    width: 1px;
-    display: inline;
+  width: 1px;
+  display: inline;
+  height: 100px;
 }
-.firs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .imgessss span {
-    display: inline;
+  display: inline;
 }
-.onediv {
-width: 50%;
+
+.awldiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 24%; 
 }
-.divquiksm {
-    width: 24%;
+
+.firs {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 90px;
 }
-.divquiksm {
-    width: 24%;
+
+.awldiv .firs p {
+  font-weight: 800;
+  font-size: 1.4em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.divquiksm {
-    width: 24%;
+
+.awldiv .awp {
+  font-size: .8em;
+  font-weight: 600;
+  text-align:left;
+  width: 90%;
+
 }
-.divquiksm {
-    width: 24%;
+
+.awldiv .socialico {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.awldiv .socialico span {
+  background-color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  font-size: 1.1em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: white;
+}
+.awldiv .socialico span:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(155, 137, 36);
+  cursor: pointer;
+}
+
+.quicklinkone {
+ width: 100%;
+  max-width: 24%; 
+  /* text-align: center; */
+}
+.quicklinkone h2 {
+  width: 100%;
+  font-size: 1.8em;
+  text-align: center;
+}
+.quicklinkone ul {
+  
+ 
+  padding-left: 4rem;
+
+}
+.quicklinkone ul li:hover {
+  color:  rgb(196, 169, 35);
+  cursor: pointer;
+
+}
+.divforlastinput {
+  width: 100%;
+  text-align: center;
+  max-width: 24%; 
+}
+
+.divforlastinput h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  width: 95%;
+}
+hr {
+  width: 88%;
+  margin: auto;
+  padding-bottom: 1rem;
+  background-color: rgb(22, 25, 27);
+  color: white;
+  bottom: 0;
+}
+.divforlastinput p {
+  font-size: .8em;
+  font-weight: 600;
+  width: 90%;
+}
+
+.divforlastinput span input {
+  height: 40px;
+}
+
+.pllast {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  background-color: rgb(22, 25, 27);
+  color: white;
+  bottom: 0;
+}
+.spaP p {
+  margin-bottom: 0;
+}
+.divforlastinput span button {
+  border: 0;
+  background-color:  rgb(155, 137, 36);
+  color: white;
+  font-weight: 600;
+  padding: 8px 5px;
+  width: 90%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+}
+.divforlastinput button:hover {
+  border: 2px solid rgb(155, 137, 36);
+  background-color: white;
+  color: rgb(155, 137, 36);
+} 
+.spann {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .end {
+      justify-content: center;
+
+  }
+
+  .awldiv,
+  .quicklinkone,
+  .divforlastinput {
+      max-width: 45%; 
+      margin-bottom: 3rem;
+  }
+.pllast {
+font-size: .8em;
+font-weight: 700;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .awldiv {
+    max-width: 90%;
+      text-align: left;
+  }
+.quicklinkone {
+  max-width : 90%
+}
+.quicklinkone h2 {
+  text-align: left;
+  padding-left: 20px;
+}
+ .divforlastinput {
+  max-width: 90%;
+ }
+ .pllast {
+  font-size: .7em;
+  width: 90%;
+ }
 }

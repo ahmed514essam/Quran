@@ -12,14 +12,16 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.end}>
-        <div className={styles.onediv}>
+        <div className={styles.awldiv}>
           <div className={styles.firs}>
             <span className={styles.imgessss}>
               <img src="/public/icons/icon-removebg-preview.png" />
             </span>
-            Mu<span className={styles.akra}>s</span>lim
+            <p>
+              M<span className={styles.akra}>us</span>lim
+            </p>
           </div>
-          <p>
+          <p className={styles.awp}>
             Welcome to my Islamic community, I present to you here many features
             related to faith, it was created by Engineer Ahmed Essam El-Sayed,
             and I will be glad to contact me
@@ -39,37 +41,40 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        <div className={styles.divquiksm}>
+
+        <div className={styles.quicklinkone}>
           <h2>Quick links</h2>
-          <ul>
+          <ul typeof="arrow">
             <li>القرأن الكريم</li>
             <li>الأذكار</li>
             <li>الراديو</li>
             <li>تعليم الاسلام</li>
           </ul>
         </div>
-      </div>
-      <div className={styles.twodiv}>
-        <div className={styles.divqila}>
+
+        <div className={styles.quicklinkone}>
           <h2>Quick links</h2>
-          <ul>
+          <ul typeof="arrow">
             <li> About</li>
-            <li>Contact</li>
+            <li>Privacy Policy</li>
             <li>Account</li>
             <li> Library</li>
           </ul>
         </div>
-        <div>
+
+        <div className={styles.divforlastinput}>
           <h2>Newsletter</h2>
           <p>You will be notified when something new will be appear</p>
-          <span>
-            <input />
-            <button>Go</button>
+          <span className={styles.spann}>
+            {/* <input /> */}
+            <button>Contact Me</button>
           </span>
         </div>
       </div>
       <hr />
-      <p>© Copyright 2024 | Muslim-by Ahmed Essam | All right reserved.</p>
+      <span className={styles.spaP}>
+      <p className={styles.pllast}>© Copyright 2024 | Muslim-by Ahmed Essam | All right reserved.</p>
+      </span>
     </footer>
   );
 }

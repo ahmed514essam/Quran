@@ -1,5 +1,6 @@
 import React from 'react';
 import style from "./Home.module.css";
+import "../../style.css"
 import SearchInput from './SearchInput/SearchInput';
 import QuranPage from './QurabPage/QuranPage';
 import { useNavigate } from 'react-router-dom';

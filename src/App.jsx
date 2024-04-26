@@ -25,6 +25,7 @@ import ProfilePage from "./Pages/Account/ProfilePage/ProfilePage";
 import RegisterTwo from "./Pages/Account/Register/RegisterTwo";
 import MyAcc from "./Pages/Account/MyAcc/MyAcc";
 import BookLIb from "./Pages/Account/BookLibrary/BookLIb";
+import About from "./Pages/About/About";
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
 <Route path="/contactus" element={<ContactUs/>} />
 <Route path="/account" element={<MyAcc/>} />
 <Route path="library" element={<BookLIb/>} />
+<Route path="/about" element={<About/>} /> 
   </Route>
  
       </Routes>
