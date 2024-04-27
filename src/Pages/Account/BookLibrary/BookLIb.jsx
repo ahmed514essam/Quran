@@ -13,6 +13,8 @@ setTrfa(true)
 }
 
   } , [])
+
+
   
   return (
     <>
@@ -62,7 +64,7 @@ setTrfa(true)
       <div className="contentfalse">
      <p className="pt-5 pb-5 fw-bold text-center text-light">انشأ حسابك الخاص لرؤية الكتب</p>
    
-   <Link className="likgo"> Go To Account</Link>
+   <Link to="/account" className="likgo"> Go To Account</Link>
    </div>
     </section>
     )}

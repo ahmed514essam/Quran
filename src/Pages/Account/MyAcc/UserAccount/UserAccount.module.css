@@ -39,6 +39,7 @@ color: rgb(196, 196, 196);
     -moz-transition: .5s ease;
     -ms-transition: .5s ease;
     -o-transition: .5s ease;
+    padding-right: 0;
 }
 .conImges img:hover {
     transform: scale(1.1);
@@ -52,10 +53,14 @@ color: rgb(196, 196, 196);
     text-align: center;
     font-size: 1.5em;
     font-weight: 600;
-    color: rgb(139, 139, 139);
+    color: rgb(44, 44, 44);
+    padding-top: 0;
 }
 .spanhighlight {
     color: white;
+}
+.conImges img {
+    padding-right: 0;
 }
 .userDatas {
     width: 50%;
@@ -139,4 +144,65 @@ color: rgb(196, 196, 196);
         margin-right: 0px;
         margin-bottom: 10px;
     }
+}
+.overlaye {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+.overlaye .alerte {
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgb(117, 110, 67);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    
+}
+.overlaye .alerte h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 5px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.overlaye .alerte .btnalerte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+.btnalerte button {
+    padding: 5px 10px;
+    background-color: rgb(61, 44, 24);
+    color: white;
+    border: 0;
+    font-weight: 600;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.re:hover {
+    background-color: red;
+    color: white;
+}
+.ba:hover {
+    background-color: green;
+    color: white;
 }

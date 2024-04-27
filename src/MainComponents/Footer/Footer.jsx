@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -9,6 +10,29 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const phoneNumber = '01094461846'; 
+  const message = 'Hello!';
+  const handleClick = () => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
+const gotoabout = () => {
+  navigate("/about")
+}
+const gotoprivacy = () => {
+  navigate("/contactus")
+}
+const gotoacc = () => {
+  navigate("/account")
+}
+const gotolibrary = () => {
+  navigate("/library")
+}
+const gotocontact = () => {
+  navigate("/contactus")
+}
   return (
     <footer className={styles.footer}>
       <div className={styles.end}>
@@ -27,18 +51,28 @@ export default function Footer() {
             and I will be glad to contact me
           </p>
           <div className={styles.socialico}>
-            <span>
+          <a target="_blank" href="https://www.facebook.com/ahmed.egyptian.9889">
+            <span >
               <FontAwesomeIcon icon={faFacebookF} />
             </span>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/ahmed-essam-618055230/">
             <span>
               <FontAwesomeIcon icon={faLinkedinIn} />
             </span>
+            </a>
+            <a target="_blank" href="https://twitter.com/?lang=en">
             <span>
               <FontAwesomeIcon icon={faTwitter} />
             </span>
-            <span>
+            </a>
+           <a >
+
+           <span onClick={handleClick}>
               <FontAwesomeIcon icon={faWhatsapp} />
             </span>
+           </a>
+         
           </div>
         </div>
 
@@ -55,10 +89,10 @@ export default function Footer() {
         <div className={styles.quicklinkone}>
           <h2>Quick links</h2>
           <ul typeof="arrow">
-            <li> About</li>
-            <li>Privacy Policy</li>
-            <li>Account</li>
-            <li> Library</li>
+            <li onClick={gotoabout}> About</li>
+            <li onClick={gotoprivacy}>Privacy Policy</li>
+            <li onClick={gotoacc}>Account</li>
+            <li onClick={gotolibrary}> Library</li>
           </ul>
         </div>
 
@@ -67,7 +101,7 @@ export default function Footer() {
           <p>You will be notified when something new will be appear</p>
           <span className={styles.spann}>
             {/* <input /> */}
-            <button>Contact Me</button>
+            <button onClick={gotocontact}>Contact Me</button>
           </span>
         </div>
       </div>

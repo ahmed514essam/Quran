@@ -34,6 +34,10 @@ export default function UserAccount({ setDisplay }) {
     setAlertlog(false);
   };
 
+const gotolibrary = ()=> {
+  navigate("/library")
+}
+
   return (
     <>
       {userData ? (
@@ -82,7 +86,7 @@ export default function UserAccount({ setDisplay }) {
           <div className={style.contentDetails}>
            
 
-            <div className={style.contetCard}>
+            <div onClick={gotolibrary} className={style.contetCard}>
                 <div className={style.conImges}>
                     <img src="/public/imges/library.avif" />
                 </div>
@@ -97,12 +101,12 @@ export default function UserAccount({ setDisplay }) {
       )}
 
       {alertlog && (
-        <div className="overlaye">
-          <div className="alerte">
+        <div className={style.overlaye}>
+          <div className={style.alerte}>
             <h3>Make sure to delete your account</h3>
-            <div className="btnalerte">
-              <button onClick={removeAcc}>Remove</button>
-              <button onClick={cancelRemoveAcc}>Cancel</button>
+            <div className={style.btnalerte}>
+              <button className={style.re} onClick={removeAcc}>Remove</button>
+              <button className={style.ba} onClick={cancelRemoveAcc}>Cancel</button>
             </div>
           </div>
         </div>
