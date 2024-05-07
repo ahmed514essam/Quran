@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import style from "./ShowSurha.module.css";
 import surahs from "../../../surahs.json"
 import { useParams } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 // Mapping object for translation
 const revelationTypes = {
   'Meccan': 'مكية',
@@ -316,6 +316,7 @@ const numberInSurah = {
 
 
 export default function ShowSurha() {
+  const [ t , i18n ] = useTranslation();
   const { number } = useParams();
 
   const [filterItem, setFilterItem] = useState({});
@@ -364,7 +365,7 @@ export default function ShowSurha() {
           <p>{translateRevelationType(filterItem.revelationType)}</p>
         </div>
       </nav>
-      <h1 className={style.honebasmala}>بسم الله الرحمن الرحيم </h1>
+      <h1 className={style.honebasmala}> {t('basm')} </h1>
       <div className={style.divdatasurha}>
         {filterItem.ayahs.map((ayah, index) => (
           <p className={style.contetOfAyahs} key={index}>{ayah.text}<span className={style.numberayahs}>{translateRevelationNumber(ayah.numberInSurah)}</span>   </p>

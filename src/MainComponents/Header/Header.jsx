@@ -1,11 +1,15 @@
 import React from "react";
 import "./haed.css";
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars ,
-  
-  
+  faRadio,
+  faPersonPraying,
+  faMosque,
+  faBookQuran,
   faEnvelope,
   faUser,
   faGlobe,
@@ -16,6 +20,39 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
+  const [ t , i18n ] = useTranslation();
+  const navigate = useNavigate();
+
+  const gotoabout = () => {
+    navigate("/about")
+  }
+  const gotoprivacy = () => {
+    navigate("/contactus")
+  }
+  const gotoacc = () => {
+    navigate("/account")
+  }
+  const gotolibrary = () => {
+    navigate("/library")
+  }
+  const gotocontact = () => {
+    navigate("/contactus")
+  }
+  
+  
+  
+  const radiogoo = () => {
+    navigate("/radio")
+  }
+  const talimgoo = () => {
+    navigate("/taliameldi")
+  }
+  const azkargoo = () => {
+    navigate("/azkargoo")
+  }
+  const gosectionqura = () => {
+    navigate("/")
+  }
   return (
     <>
       <nav className="mainbav navbar navbar-expand-lg navbar navbar-expand-lg navbar-light  ">
@@ -25,7 +62,7 @@ export default function Header() {
               className="dangereioust text-decoration-none fw-bold"
               href="#"
             >
-              Quran
+              M<span className="collorSpanHead">us</span>lim
             </Link>
 
             <li className="nav-item dropdown ">
@@ -42,31 +79,31 @@ export default function Header() {
               <ul className="dropdown-menu">
               <span className="listmain">
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    حسابي
+                  <Link className="dropdown-item" to="/account">
+                  {t('account')}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    أذكاري
+                  <Link className="dropdown-item" to="/Azkary">
+                    {t('azkar')}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    الاستماع
+                  <Link className="dropdown-item" to="radio">
+                  {t('radio')}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    أحاديث نبوية
+                  <Link className="dropdown-item" to="about">
+                  {t('about')} 
                   </Link>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
+                
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    الصفحة الرئيسية
+                  <Link className="dropdown-item" to="/">
+                  {t('home')}
                   </Link>
                 </li>
 </span>
@@ -74,11 +111,36 @@ export default function Header() {
 
            
                 <li>
-                  <Link className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/account">
                   <FontAwesomeIcon className="coloricone" icon={faUser} />
-                  <span className="space">     حسابي </span>
+                  <span className="space">         {t('account')} </span>
                   </Link>
                 </li>
+                {/* <li className="text-light nav-item dropdown ">
+              <Link
+                className="linkschouse  lisstye text-light nav-link toggle "
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+
+<FontAwesomeIcon className="coloricones" icon={faGlobe} />
+<span className="space">  اللغة </span>
+              </Link>
+              <ul className="dropdown-menu">
+              
+                <li>
+                  <Link className="dropdown-item" >
+                    Arabic
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" >
+                    English
+                  </Link>
+                </li>
+             </ul>
+             </li> */}
                 <li>
                   <Link className="dropdown-item" href="#">
                   <FontAwesomeIcon className="coloricones" icon={faGlobe} />
@@ -86,19 +148,19 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/contactus">
                   <FontAwesomeIcon className="coloriconee" icon={faMessage} />
                     <span className="space"> تواصل معنا </span>
                   </Link>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
+                  <br/>
                 </li>
             
                 <li>
-                  <Link className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/">
                   <FontAwesomeIcon className="coloricon" icon={faHouse} />
-                  <span className="space">  الصفحة الرئيسية </span>
+                  <span className="space">       {t('home')} </span>
                   </Link>
                 </li>
 </span>
@@ -132,89 +194,116 @@ export default function Header() {
                 <Link
                   className="linkschouse nav-link "
                   aria-current="page"
-                  href="#"
+                 to="/"
                 >
                   <FontAwesomeIcon icon={faHouse} />
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
+                <Link className="linkschouse nav-link " to="/account">
                   <FontAwesomeIcon icon={faUser} />{" "}
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                  <FontAwesomeIcon icon={faGlobe} />
-                </Link>
-              </li>
+            
+              <li className="text-light nav-item dropdown ">
+              <Link
+                className="linkschouse  lisstye text-light nav-link toggle "
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+
+                <FontAwesomeIcon icon={faGlobe} />
+              </Link>
+              <ul className="dropdown-menu">
+              
+                <li>
+                  <Link onClick={() => {
+                    i18n.changeLanguage('ar')
+                  }} className="dropdown-item" >
+                    Arabic
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => {
+                    i18n.changeLanguage('en')
+                  }} className="dropdown-item" >
+                    English
+                  </Link>
+                </li>
+             </ul>
+             </li>
+              
 
               <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
+                <Link className="linkschouse nav-link" t
+              to="/contactus">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </Link>
               </li>
 </span>
 
               
-<span className="mainheads pt-3">
+<span className="mainheads pt-2">
 
-<li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/home-removebg-preview.png"/>
+<li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/">
+                <div className="imgListr">
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallone" icon={faHouse} />
                 </div>
-                <span className="nameOfList">الصفحة الرئيسية</span>
+                <span className="nameOfList">     {t('home')}</span>
                 
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/account-removebg-preview.png"/>
+              <li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/account">
+                <div className="imgListr">
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallacc" icon={faUser} />
                 </div>
-                <span className="nameOfList">حسابي</span>
+                <span className="nameOfList">    {t('account')}</span>
                  
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/quran-removebg-preview.png"/>
+              <li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/">
+                <div className="imgListr">
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallqu" icon={faBookQuran} />
                 </div>
-                <span className="nameOfList">القرأن الكريم</span>
+                <span className="nameOfList">    {t('quran')} </span>
                 
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/azkary-removebg-preview.png"/>
+              <li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/Azkary">
+                <div className="imgListr">
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallzz" icon={faPersonPraying} />
                 </div>
-                <span className="nameOfList">الأذكار</span>
+                <span className="nameOfList">    {t('azkar')}</span>
                
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/radio-removebg-preview.png"/>
+              <li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/radio">
+                <div className="imgListr">
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallra" icon={faRadio} />
                 </div>
-                <span className="nameOfList">الراديو</span>
+                <span className="nameOfList">    {t('radio')}</span>
                  
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="linkschouse nav-link" href="#">
-                <div className="imgList">
-                  <img src="/public/list imges/islam-removebg-preview.png"/>
+              <li className="hgfthffhh nav-item">
+                <Link className="linkschouse nav-link" to="/taliameldi">
+                <div className="imgListr">
+                
+                <FontAwesomeIcon className="fontawsemIconListToggleSmallta" icon={faMosque} />
                 </div>
-                <span className="nameOfList">تعاليم الاسلام</span>
+                <span className="nameOfList">     {t('talim')}</span>
             
                 </Link>
               </li>

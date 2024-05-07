@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+  const [ t , i18n ] = useTranslation();
   const navigate = useNavigate();
   const phoneNumber = '01094461846'; 
   const message = 'Hello!';
@@ -33,6 +35,23 @@ const gotolibrary = () => {
 const gotocontact = () => {
   navigate("/contactus")
 }
+
+
+
+const radiogoo = () => {
+  navigate("/radio")
+}
+const talimgoo = () => {
+  navigate("/taliameldi")
+}
+const azkargoo = () => {
+  navigate("/Azkary")
+}
+const gosectionqura = () => {
+  navigate("/")
+}
+
+
   return (
     <footer className={styles.footer}>
       <div className={styles.end}>
@@ -79,10 +98,10 @@ const gotocontact = () => {
         <div className={styles.quicklinkone}>
           <h2>Quick links</h2>
           <ul typeof="arrow">
-            <li>القرأن الكريم</li>
-            <li>الأذكار</li>
-            <li>الراديو</li>
-            <li>تعليم الاسلام</li>
+            <li onClick={gosectionqura}> {t('quran')}</li>
+            <li onClick={azkargoo}> {t('azkar')}</li>
+            <li onClick={radiogoo}> {t('radio')}</li>
+            <li onClick={talimgoo}> {t('talim')}</li>
           </ul>
         </div>
 

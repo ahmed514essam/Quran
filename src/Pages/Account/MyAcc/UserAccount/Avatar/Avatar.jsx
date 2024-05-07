@@ -8,7 +8,7 @@ export default function Avatar() {
   const [ user , setUser] = useState(false);
 
   const handleImageChange = (e) => {
-    console.log("Image selected");
+    
     const file = e.target.files[0];
     setImage(file);
     setImageName(file.name);

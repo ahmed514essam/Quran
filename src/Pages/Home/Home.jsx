@@ -4,8 +4,21 @@ import "../../style.css"
 import SearchInput from './SearchInput/SearchInput';
 import QuranPage from './QurabPage/QuranPage';
 import { useNavigate } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 export default function Home() {
+const [ t , i18n ] = useTranslation();
+
+// const Read = props.Read.map(Read => {
+// if (i18n == 'ar'){
+//   return ({
+//     'id' : Read.id ,
+// 'title' : Read.title.ar , 
+// 'description' : Read.description.ar , 
+//   });
+// }
+// });
+
+
   const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
@@ -31,17 +44,17 @@ const goToTalem= () => {
         <div className={style.qeran}>
           <img src="/public/imges/download__1_-removebg-preview.png" alt="Quran" />
         </div>
-        <br />
+       
         <div className={style.btnsmain}>
-          <button onClick={() => scrollToSection('sectionShowSurahs')}>القرأن الكريم</button>
-          <button onClick={goToAzkary}>الأذكار</button>
-          <button onClick={goToRadio}>الراديو</button>
-          <button onClick={goToTalem}>تعليم</button>
+          <button onClick={() => scrollToSection('sectionShowSurahs')}>{t('quran')} </button>
+          <button onClick={goToAzkary}>{t('azkar')}</button>
+          <button onClick={goToRadio}>{t('radio')}</button>
+          <button onClick={goToTalem}>{t('talim')}</button>
         </div>
-        {/* <SearchInput /> */}
+        
       </section>
       <section id="sectionShowSurahs" className={style.sectioTwo}>
-        <h2>أقرأ بأسم ربك الذي خلق</h2>
+        <h2>{t('title')}</h2>  
         <QuranPage />
       </section>
     </>

@@ -9,10 +9,14 @@ background-repeat: no-repeat; */
     -o-border-radius: 25px;
     /* border: 2px solid  rgb(32, 57, 75); */
 background-color: rgb(56, 69, 82);
+
+display: flex;
+flex-direction:column;
 }
 .adasdasd {
     width: 100%;
    height: 30px;
+   padding-bottom: 10px;
     /* background-image: url(/public/imges/istockphoto-1762928999-612x612.jpg);
     background-repeat: no-repeat;
     background-size: cover; */
@@ -20,4 +24,7 @@ background-color: rgb(56, 69, 82);
 .linkcontB {
     list-style: none;
     text-decoration: none;
+}
+.adasdasd p {
+    padding-top: 0;
 }

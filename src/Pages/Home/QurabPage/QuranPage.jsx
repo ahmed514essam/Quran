@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./quran.css";
+
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function QuranPage() {

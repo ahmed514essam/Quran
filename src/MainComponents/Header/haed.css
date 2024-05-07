@@ -19,6 +19,11 @@ box-sizing: border-box;
     z-index: 999;
    
 }
+.collorSpanHead {
+    color:  rgb(196, 169, 35);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
 .dangereioust {
     color: rgb(214, 214, 214);
     font-size: 1.4em;
@@ -30,6 +35,30 @@ box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+.bttnndrop {
+    font-size: .8em;
+    border: none;
+    background-color: rgb(22, 25, 27);
+}
+.bttnndrop:hover {
+    font-size: .8em;
+    border: none;
+    background-color: rgb(22, 25, 27);
+}
+.bttnndrop:active {
+    font-size: .8em;
+    border: none;
+    background-color: rgb(22, 25, 27);
+}
+.lisstye {
+    font-size: .9em;
+}
+.linkschouse:hover {
+    color: #ffffff;
+}
+.linkschouse:active {
+    color: #ffffff;
 }
 .form-control {
     direction: rtl;
@@ -142,10 +171,11 @@ display: none;
 }
 .imgList img {
     object-fit: cover;
-    width: 100%;
+    width: 80%;
+    
 }
 .imgList {
-    width: 36px;
+    width: 15px;
 }
 .nameOfList {
     color: rgb(230, 230, 255);
@@ -227,4 +257,44 @@ border: none;
 border: 0;
 height: 40px;
 }
+}
+
+.hgfthffhh {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.linkschouse {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+}
+.linkschouse img {
+    width: 20px;
+}
+.fontawsemIconListToggleSmallone {
+    color: rgba(46, 121, 192, 0.63);
+    font-size: 1.1em;
+}
+.fontawsemIconListToggleSmallacc {
+    color: rgb(194, 194, 194);
+    font-size: 1.1em;
+}
+.fontawsemIconListToggleSmallqu {
+    color: rgba(192, 184, 79, 0.747);
+    font-size: 1.1em;
+}
+.fontawsemIconListToggleSmallzz {
+    color: rgb(37, 94, 56);
+    font-size: 1.1em;
+}
+.fontawsemIconListToggleSmallra {
+    color: rgb(77, 77, 77);
+    font-size: 1.1em;
+}
+.fontawsemIconListToggleSmallta {
+    color: orangered;
+    font-size: 1.1em;
 }
