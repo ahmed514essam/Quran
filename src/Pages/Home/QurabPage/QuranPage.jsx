@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "./quran.css";
-
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function QuranPage() {
+  const [t , i18n] = useTranslation();
+
+
+
   const [soraname, setSoraame] = useState([]);
 
   const getFromApi = async () => {
@@ -19,6 +23,17 @@ export default function QuranPage() {
   }, []);
 
   const navigate = useNavigate();
+
+  // const soranam = props.soraname.map(item => {
+  //   if (i18n == 'ar'){
+  //     return ({
+  //       'id' : item.id ,
+  //   'title' : item.title.ar , 
+  //   'description' : Read.description.ar , 
+  //     });
+  //   }
+  //   });
+
 
   return (
     <>

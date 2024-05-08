@@ -1,15 +1,14 @@
 import React from "react";
 import "./Abadat.css";
+import { useTranslation } from 'react-i18next';
 export default function Abadat() {
+  const [ t , i18n ] = useTranslation();
   return (
     <section className="sectionAbadatAll">
       <div className="divhead">
-        <h2>العبادات</h2>
+        <h2>{t('at')}</h2>
         <p>
-          يهدف هذا الفرع إلى تأصيل العبادات وترسيخها، وربط العبادة وأحكامها
-          بالكتاب الكريم والسنة النبوية المطهرة. ويتناول فقه العبادات أحكام
-          العبادات المكلف بها الإنسان بالتوضيح والتفصيل كما وردت عن النبي محمد ﷺ
-          وعن صحابته رضي الله عنهم أجمعين.
+        {t('text1')}
         </p>
       </div>
 
@@ -20,10 +19,9 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body">
-          <h3>الطهاره</h3>
+          <h3>{t('thara')}</h3>
             <p className="card-text">
-            لصلاة هي ركن الإسلام الثاني بعد الشهادتين، ولما كانت الصلاة لا تصح بدون طهارة، كان من المناسب أن يبدأ الطالب بتعلم أحكام الطهارة لتصح صلاته
-            </p>
+            {t('text2')}            </p>
           </div>
         </div>
         <div class="card ">
@@ -32,10 +30,9 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body">
-          <h3>الصلاء</h3>
+          <h3>{t('sala')}</h3>
             <p className="card-text">
-            الصلاة هي عماد الدين وهي أهم ما يجب البدء بتعلمه من العبادات، فهي ثاني أركان الدين الإسلامي بعد الشهادتين  ولا يتم إسلام المرء إلا بأدائها.
-            </p>
+            {t('text3')}            </p>
           </div>
         </div>
         <div class="card ">
@@ -44,10 +41,9 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body">
-          <h3>الذكاه</h3>
+          <h3>{t('zakaa')}</h3>
             <p className="card-text">
-            الزكاة هي الركن الثالث من أركان الإسلام، فرضها الله لتزكي المعطي والآخذ وتطهرهما، ولئن كانت في ظاهرها نقصاً في كمية المال إلا أن من آثارها زيادة المال بركة، وزيادة المال كمية، وزيادة الإيمان في قلب صاحبها.
-            </p>
+            {t('text4')}            </p>
           </div>
         </div>
         <div class="card ">
@@ -56,10 +52,9 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body">
-          <h3>الصوم</h3>
+          <h3>{t('saom')}</h3>
             <p className="card-text">
-            صوم رمضان هو الركن الرابع من أركان الإسلام، والصوم عبادة جليلة، فرضها الله على المسلمين كما فرضها على الأمم السابقة لتحصيل التقوى التي هي مفتاح كل خير.
-            </p>
+            {t('text5')}            </p>
           </div>
         </div>
         <div class="card ">
@@ -68,11 +63,10 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body ">
-          <h3>الحج</h3>
+          <h3>{t('hg')}</h3>
             <p className="card-text">
         
-الحج هو الركن الخامس من أركان الإسلام، ويجب على المسلم البالغ القادر مرة واحدة في العمر.
-            </p>
+            {t('text6')}            </p>
           </div>
         </div>
         <div class="card ">
@@ -81,10 +75,9 @@ export default function Abadat() {
             className="cardimges card-img-top"
           />
           <div className="card-body">
-          <h3>الموت والجنازة</h3>
+          <h3> {t('die')}</h3>
             <p className="card-text">
-            الموت ليس نهاية الأمر ولكنه مرحلة جديدة للإنسان وبداية للحياة الكاملة في الآخرة وكما حرص الإسلام على رعاية الحقوق منذ الولادة فقد أكد على الأحكام التي تحفظ حقوق الميت وتراعي حال أهله وأقاربه.
-            </p>
+            {t('text7')}            </p>
           </div>
         </div>
       </div>

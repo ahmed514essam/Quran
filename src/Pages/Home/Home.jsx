@@ -8,15 +8,7 @@ import { useTranslation } from 'react-i18next';
 export default function Home() {
 const [ t , i18n ] = useTranslation();
 
-// const Read = props.Read.map(Read => {
-// if (i18n == 'ar'){
-//   return ({
-//     'id' : Read.id ,
-// 'title' : Read.title.ar , 
-// 'description' : Read.description.ar , 
-//   });
-// }
-// });
+
 
 
   const navigate = useNavigate();

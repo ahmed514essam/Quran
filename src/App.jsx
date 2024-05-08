@@ -19,7 +19,7 @@ import Abadat from "./Pages/TalemElden/TalemCompo/Abadat/Abadat";
 import Mnasbat from "./Pages/TalemElden/TalemCompo/Mnasbat/Mnasbat";
 import Akida from "./Pages/TalemElden/TalemCompo/Akida/Akida";
 import QuranKarim from "./Pages/TalemElden/TalemCompo/QuranKarim/QuranKarim";
-import Sona from "./Pages/TalemElden/TalemCompo/SonaNabwia/Sona";
+
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import ProfilePage from "./Pages/Account/ProfilePage/ProfilePage";
 import RegisterTwo from "./Pages/Account/Register/RegisterTwo";
@@ -45,7 +45,6 @@ function App() {
 <Route path="/taliameldi/moasbat" element={<Mnasbat/>} />
 <Route path="/taliameldi/akida" element={<Akida/>} />
 <Route path="/taliameldi/qurakarim" element={<QuranKarim/>} />
-<Route path="/taliameldi/sonanawia" element={<Sona/>} />
 <Route path="/contactus" element={<ContactUs/>} />
 <Route path="/account" element={<MyAcc/>} />
 <Route path="library" element={<BookLIb/>} />

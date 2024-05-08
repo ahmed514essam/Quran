@@ -56,7 +56,7 @@ color: rgb(236, 236, 236);
 }
 .card-body {
     height: 100px;
-    z-index: 999;
+ 
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -68,7 +68,7 @@ color: rgb(236, 236, 236);
     font-size: 1.1em;
 }
 .card-body p {
-    font-size: .9em;
+    font-size: .7em;
 }
 
 @media (max-width:777px) {
