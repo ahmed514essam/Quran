@@ -68,14 +68,23 @@
 "sala" : "the prayer" ,
 "zakaa" : "Zakat" ,
 "saom" :"Fasting" ,
+"mktaba" : "My Library" ,
 "hg" : "Pilgrimage" ,
 "die" : "Death and funeral" ,
 "winterSay" : "Winter provisions" ,
+
+"s1":"How are you, my dear? My dear" ,
+"s2" : "In order for you to join us, I will present to you my library that allows you to download some books",
+
 "tours" : "Trips" ,
 "amrad" : "Diseases and epidemics" ,
-"shadten": "The two certificates" ,
+"wellcome" : "welcome" ,
+"shadten": "The two testimonies " ,
 "ayman" : "Faith" ,
 "elnaby" : "Prophet" ,
+"sabah":" Azkar of Morning",
+"masaa":" Azkar of Night",
+"salah":" Azkar After the prayer",
 "saies" : "Hadiths",
 "about" : "About Muslim",
 "headab" : "Here, dear, we are talking about a Muslim " ,
@@ -85,6 +94,8 @@
 "fourt" : "We believe in the importance of communication and continuous learning, so we invite you to join our digital community and benefit from the valuable content we provide. Contribute with us in spreading religious awareness and interacting with the materials, whether through comments or sharing via social media. " ,
 "fivet" : " At Muslim, we believe in the power of science and teamwork in the service of Islam and society. Contribute with us to building an interconnected digital society that seeks to achieve goodness and cooperation." ,
 "sext" : " Thank you for your support and visiting our website. Together, we make a positive difference in a world that needs peace, tolerance and understanding." ,
-"sevent" : "The website was created by engineer Ahmed Essam " 
+"sevent" : "The website was created by engineer Ahmed Essam " ,
+"phg" : " Title: The Sacred Pilgrimage: Understanding the Obligation of Hajj and the Sanctity of the Kaaba In the heart of Islam lies a sacred duty, a journey of faith that transcends time and place, connecting believers across continents and generations—the pilgrimage to Hajj. Central to this sacred obligation is the Kaaba, a structure steeped in history and reverence, serving as the focal point of Muslim devotion. Understanding the significance of Hajj and the sanctity of the Kaaba unveils profound insights into the essence of Islam and the unity of its followers. Hajj, the fifth pillar of Islam, stands as a testament to the unity and equality of humanity before the divine. It is a journey undertaken by millions of Muslims annually, a spiritual odyssey that traces the footsteps of prophets and saints. The obligation of Hajj is not merely a ritual; it is a profound expression of submission to the will of Allah and a manifestation of the believer's commitment to righteousness and piety."
+
 
 }

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Avatar from "./Avatar/Avatar";
 import style from "./UserAccount.module.css";
 export default function UserAccount({ setDisplay }) {
   const [userData, setUserData] = useState(null);
   const [alertlog, setAlertlog] = useState(false);
   const navigate = useNavigate();
-
+const [ t , i18n ] = useTranslation();
   useEffect(() => {
     const storedUserData = localStorage.getItem("Data");
 
@@ -47,10 +48,10 @@ const gotolibrary = ()=> {
               <Avatar />
             </div>
             <div className={style.contetInfo}>
-              <h1><span className={style.spanhighlight}>{userData.fname}</span>  مرحبا</h1>
-              <span>   كيف حالك  ياعزيزي | عزيزتي</span>
+              <h1><span className={style.spanhighlight}>{userData.fname} ,</span>  {t('wellcome')}</h1>
+              <span> {t('s1')}</span>
               <p>
-                من اجل انك انضممت الينا سأقدم لك مكتبتي تتيح لك تحميل بعض الكتب
+                {t('s2')}
               </p>
               <h2 className={style.header2prof}>My Profile</h2>
               <p>
@@ -90,7 +91,7 @@ const gotolibrary = ()=> {
                 <div className={style.conImges}>
                     <img src="/public/imges/library.avif" />
                 </div>
-                <p>مكتبي</p>
+                <p>{t('mktaba')}</p>
             </div>
           </div>
         </section>

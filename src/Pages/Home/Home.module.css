@@ -11,31 +11,48 @@
  flex-direction: column;
  align-items: center;
  justify-content:space-around;
+ text-align: center;
 }
 
   .qeran {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-
+width: 100%;
+text-align: center;
+width: 70% ;
+padding-left: 20px;
   }
   .qeran img {
-    width: 300px;
-    object-fit: cover;
+   text-align: center;
+    
   }
-  @media screen and (max-width:347px) {
+  @media  (max-width:347px) {
     .qeran {
-    
-        display: flex;
-        justify-content: center;
-        height: 100px;
-    
-      }
-      .qeran img {
-        width: 200px;
-        object-fit: cover;
-      }
+      width: 100%;
+      text-align: center;
+        }
+        .qeran img {
+         text-align: center;
+          width: 50%;
+          font-size: 2em;
+        }
 }
+
+@media only screen and (min-width: 322px) and (max-width: 729px)  {
+ .qeran {
+  width: 90%;
+ }
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 510px)  {
+    .qeran {
+     width: 500px;
+    }
+     }
+    
+     @media only screen and (min-width: 256px) and (max-width: 384px)  {
+      .qeran {
+       width: 500px;
+      }
+       }
 
 .sectioTwo {
 
@@ -85,7 +102,7 @@ padding-top: 2rem;
 
 }
 }
-@media (max-width:360px) {
+@media (max-width:650px) {
   .btnsmain {
     display: flex;
     flex-direction: column;
@@ -98,5 +115,36 @@ padding-top: 2rem;
 
    font-size: 1.2em;
 
+  }
+}
+
+.sectionTwoElHg {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+background-color: rgb(13, 20, 26);
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+.sectionTwoElHg img {
+  width: 50% ;
+ 
+  
+}
+.sectionTwoElHg p {
+  line-height: 30px;
+}
+@media (max-width:568px) {
+  .sectionTwoElHg img {
+    width: 70% ;
+    
+    
+  }
+}
+@media (max-width:400px) {
+  .sectionTwoElHg p {
+   font-size: .9em;
+    
+    
   }
 }

@@ -31,7 +31,7 @@ padding-top: 2rem;
     height: 100%;
  text-align: center;
     direction: rtl;
- line-height: 20px;
+ line-height: 10px;
 
 
 }
@@ -54,6 +54,11 @@ padding-top: 2rem;
 .contetOfAyahs {
     display: inline-block;
     direction: ltr;
-    line-height: 30px;
+    line-height: 40px;
+padding-top: 0rem;
 
 }
+
+  .lengthSurahs {
+  width: 100%;
+  }

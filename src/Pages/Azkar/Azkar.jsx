@@ -1,9 +1,11 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import "./Azkar.css" ;
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faRightLong } from '@fortawesome/free-solid-svg-icons';
 export default function Azkar() {
+  const [ t , i18n ] = useTranslation();
   const navigate = useNavigate();
 const naviToazkarsabah = ()=>{
   navigate("/azkarelsabah")
@@ -18,7 +20,7 @@ const naviToazkarsla = ()=>{
   return (
     <section className="sectionContetAzkarAll">
 
-<h1>الأذكار</h1>
+<h1>{t('azkar')}</h1>
 
 <div className="cotainer w-100 text-center  col-lg-3 col-md-2 col-sm-1">
 
@@ -27,7 +29,7 @@ const naviToazkarsla = ()=>{
   <img src="/public/imges/morning.avif" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center ">
   
-  <span className="spanAddressAzkar">أذكار الصباح </span>
+  <span className="spanAddressAzkar">{t('sabah')}</span>
   <FontAwesomeIcon className="iconarrowAzkar" icon={faRightLong} />
 
   </figcaption>
@@ -38,7 +40,7 @@ const naviToazkarsla = ()=>{
   <img src="/public/imges/night.avif" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center ">
  
-  <span className="spanAddressAzkar">أذكار المساء</span>
+  <span className="spanAddressAzkar"> {t('masaa')}</span>
   <FontAwesomeIcon className="iconarrowAzkar" icon={faRightLong} />
 
   </figcaption>
@@ -48,7 +50,7 @@ const naviToazkarsla = ()=>{
   <img src="/public/imges/salah.jpg" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center "> 
  
-  <span className="spanAddressAzkar">أذكار بعد الصلاء</span>
+  <span className="spanAddressAzkar">  {t('salah')}</span>
   <FontAwesomeIcon className="iconarrowAzkar" icon={faRightLong} />
  
 

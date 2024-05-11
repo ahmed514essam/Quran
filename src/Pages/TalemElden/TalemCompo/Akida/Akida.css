@@ -58,17 +58,19 @@ color: rgb(236, 236, 236);
     z-index: 2;
 }
 .card-body {
-    height: 200px;
-   font-size: .9em;
+    height: 100%;
+   font-size: .8em;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+
     direction: rtl;
 }
 .card-body h3 {
     font-size: 1.1em;
+    font-weight: 600;
 }
 .card-body p {
     font-size: .7em;
