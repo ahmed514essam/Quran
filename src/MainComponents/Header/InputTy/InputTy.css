@@ -130,11 +130,12 @@
     .overlaye .alerteyy {
         width: 350px;
         height: 500px;
-       
+       overflow: scroll;
+       scroll-behavior: smooth;
          background-color: rgb(255, 255, 255);
-     
         
     }
+ 
     .overlaye .alerteyy h3 {
         text-align: center;
         font-size: 1.1em;
@@ -163,15 +164,55 @@
         -o-border-radius: 10px;
         background-color: rgb(255, 255, 255);
         padding-left: 5px;
+        display: block;
+        margin: auto;
 }
 .gfhghghjgyj {
     width: 100%;
   
     direction: rtl;
 }
+.boxSurahName button {
+    padding: 10px 10px;
+
+}
 .buttunExClose {
     font-size: 1.7em;
     background-color: white;
    border: none;
    padding: 5px 5px;
+}
+.btnalertee button {
+    padding: 5px 10px ;
+    font-weight: 600;
+    margin-top: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgba(145, 138, 42, 0.747);
+    color: white;
+    border: 0;
+    transition: .8s ease;
+    -webkit-transition: .8s ease;
+    -moz-transition: .8s ease;
+    -ms-transition: .8s ease;
+    -o-transition: .8s ease;
+}
+.btnalertee button:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+.boxSurahName {
+    width: 80%;
+    margin: auto;
+    
+}
+.boxSurahName button {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import "./InputTy.css";
+import "./InputTy.css"
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faX, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 export default function InputTy() {
   const [t, i18n] = useTranslation();
-  const [showSearch, setShowSearch] = useState(true);
+  const [showSearch, setShowSearch] = useState(false);
   const [formData, setFormData] = useState({ text: '' });
   const [filteredData, setFilteredData] = useState([]);
   const [soraList, setSoraList] = useState([]);
@@ -46,7 +47,12 @@ export default function InputTy() {
       setFilteredData([]);
     }
   };
-
+const trueSearch = () => {
+  setShowSearch(true)
+}
+const cliseSearch = () => {
+  setShowSearch(false)
+}
   return (
     <>
       <form className="forminput d-flex" role="search" onSubmit={e => e.preventDefault()}>
@@ -61,6 +67,7 @@ export default function InputTy() {
           name="text"
           value={formData.text}
           onChange={handleChange}
+          onClick={trueSearch}
         />
       </form>
 
@@ -81,12 +88,14 @@ export default function InputTy() {
                 value={formData.text}
                 onChange={handleChange}
               />
-              <button onClick={handleSearch}>Search</button>
+              <button onClick={handleSearch}>
+              <FontAwesomeIcon icon={faPlay} />
+              </button>
             </div>
 
-            <div>
+            <div className="boxSurahName">
               {filteredData.map((item, index) => (
-                <button key={index}>{item.englishName} ({item.name})</button>
+                <Link to={`/${item.number}`} ><button onClick={cliseSearch} key={index}> ({item.name})</button></Link>
               ))}
             </div>
           </div>

@@ -9,9 +9,9 @@ export default function About() {
     <section className={sty.main}>
         <h1>{t('about')} </h1>
         <p> {t('headab')}</p>
-        <img src="/public/imges/oneabout.jfif" class="img-fluid" alt="..."></img>
+        <img src="imges/oneabout.jfif" class="img-fluid" alt="..."></img>
         <p > {t('onet')}  </p>
-        <img src="/public/imges/twoabout.jfif" class="img-fluid" alt="..."></img>
+        <img src="imges/twoabout.jfif" class="img-fluid" alt="..."></img>
    <p>{t('twot')}</p>
    <p> {t('threet')}</p>
    <p> {t('fourt')}</p>  

@@ -33,7 +33,7 @@ else {
        <img src={URL.createObjectURL(image)} alt="user photo" />
     ) : (
 
-      <img src="/public/imges/user.jfif"/>
+      <img src="imges/user.jfif"/>
     )}
     
     </div>

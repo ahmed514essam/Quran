@@ -50,7 +50,7 @@ const goToakida = () => {
 
         <div className="cotainere w-100 text-center row">
           <div onClick={goToabadat} className="figuree col-lg-4 col-md-6 col-sm-12">
-            <img src="/public/imges/salah.jpg" className="figure-img img-fluid rounded" alt="uh" />
+            <img src="imges/salah.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare"> {t('at')}</span>
               <FontAwesomeIcon className="iconarrowAzkare" icon={faRightLong} />
@@ -58,7 +58,7 @@ const goToakida = () => {
           </div>
 
           <div onClick={goTomonasbat} className="figuree col-lg-4 col-md-6 col-sm-12">
-            <img src="/public/imges/mnasbat.jpg" className="figure-img img-fluid rounded" alt="uh" />
+            <img src="imges/mnasbat.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">{t('mt')}</span>
               <FontAwesomeIcon className="iconarrowAzkare" icon={faRightLong} />
@@ -66,7 +66,7 @@ const goToakida = () => {
           </div>
 
           <div onClick={goToakida} className="figuree col-lg-4 col-md-6 col-sm-12">
-            <img src="/public/imges/akidaa.jpg" className="figure-img img-fluid rounded" alt="uh" />
+            <img src="imges/akidaa.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare">{t('ht')}</span>
               <FontAwesomeIcon className="iconarrowAzkare" icon={faRightLong} />
@@ -74,7 +74,7 @@ const goToakida = () => {
           </div>
 
           <div onClick={goToquran} className="figuree col-lg-4 col-md-6 col-sm-12">
-            <img src="/public/imges/qurann.jpg" className="figure-img img-fluid rounded" alt="uh" />
+            <img src="imges/qurann.jpg" className="figure-img img-fluid rounded" alt="uh" />
             <figcaption className="figure-caption text-center">
               <span className="spanAddressAzkare"> {t('qt')}</span>
               <FontAwesomeIcon className="iconarrowAzkare" icon={faRightLong} />

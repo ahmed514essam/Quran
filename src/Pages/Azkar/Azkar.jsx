@@ -26,7 +26,7 @@ const naviToazkarsla = ()=>{
 
 
 <div onClick={naviToazkarsabah} className="figure">
-  <img src="/public/imges/morning.avif" className="figure-img img-fluid rounded " alt="uh" />
+  <img src="imges/morning.avif" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center ">
   
   <span className="spanAddressAzkar">{t('sabah')}</span>
@@ -37,7 +37,7 @@ const naviToazkarsla = ()=>{
 
 
 <div onClick={naviToazkarmasa} className="figure">
-  <img src="/public/imges/night.avif" className="figure-img img-fluid rounded " alt="uh" />
+  <img src="imges/night.avif" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center ">
  
   <span className="spanAddressAzkar"> {t('masaa')}</span>
@@ -47,7 +47,7 @@ const naviToazkarsla = ()=>{
 </div>
 
 <div onClick={naviToazkarsla} className="figure">
-  <img src="/public/imges/salah.jpg" className="figure-img img-fluid rounded " alt="uh" />
+  <img src="imges/salah.jpg" className="figure-img img-fluid rounded " alt="uh" />
   <figcaption className="figure-caption text-center "> 
  
   <span className="spanAddressAzkar">  {t('salah')}</span>

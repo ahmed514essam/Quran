@@ -58,7 +58,7 @@ const gosectionqura = () => {
         <div className={styles.awldiv}>
           <div className={styles.firs}>
             <span className={styles.imgessss}>
-              <img src="/public/icons/icon-removebg-preview.png" />
+              <img src="icons/icon-removebg-preview.png" />
             </span>
             <p>
               M<span className={styles.akra}>us</span>lim

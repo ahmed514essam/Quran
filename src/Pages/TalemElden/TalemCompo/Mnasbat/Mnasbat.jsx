@@ -13,7 +13,7 @@ export default function Mnasbat() {
       <div className="divcontentPage">
         <div class="card ">
           <img
-            src="/public/imges/winter.jpeg"
+            src="imges/winter.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -25,7 +25,7 @@ export default function Mnasbat() {
         </div>
         <div class="card ">
           <img
-            src="/public/imges/fun.jpg"
+            src="imges/fun.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -35,7 +35,7 @@ export default function Mnasbat() {
         </div>
         <div class="card ">
           <img
-            src="/public/imges/dese.jpg"
+            src="imges/dese.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">

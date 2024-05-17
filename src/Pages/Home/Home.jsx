@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./Home.module.css";
 import "../../style.css"
-import SearchInput from './SearchInput/SearchInput';
+
 import QuranPage from './QurabPage/QuranPage';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -35,7 +35,7 @@ const goToTalem= () => {
     <>
       <section className={style.sectioOne}>
         <div className={style.qeran}>
-        <img src="/public/imges/download__1_-removebg-preview.png" class="img-fluid" alt="quran main page icon"></img>
+        <img src="imges/download__1_-removebg-preview.png" class="img-fluid" alt="quran main page icon"></img>
         </div>
        
         <div className={style.btnsmain}>
@@ -54,7 +54,7 @@ const goToTalem= () => {
 
 <section className={style.sectionTwoElHg}> 
 
-<img src="/public/imges/pexels-photo-4346403.jpeg" class="img-fluid" alt="islamic image"></img>
+<img src="imges/pexels-photo-4346403.jpeg" class="img-fluid" alt="islamic image"></img>
 
 
 <p>
