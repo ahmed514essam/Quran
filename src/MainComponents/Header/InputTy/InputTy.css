@@ -1,0 +1,177 @@
+
+    .forminput {
+          
+           
+            background-color: white;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+    }
+    
+    .forminput button {
+       
+        padding: 5px 2px;
+        border: none;
+        background-color: white;
+       
+       width: 20%;
+    margin-left: 5px;
+       
+    }
+    .form-control {
+    
+    background-color: white;
+    border: none;
+    border: 0;
+    
+    }
+    .ters {
+        display: none;
+    }
+    .lists {
+        display: inline;
+    }
+    @media (max-width:800px) {
+        .ters {
+            display: inline;
+        }
+        .lists {
+            display: none;
+        }
+        .forminput {
+            margin-top: 5px;
+            width: 95%;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+    }
+    
+    .forminput button {
+        width: 20%;
+        padding: 5px 2px;
+        border: none;
+        background-color: white;
+       
+       
+        margin: auto;
+        margin-left: 5px;
+    }
+    .form-control {
+    width: 80%;
+    background-color: white;
+    border: none;
+    border: 0;
+    height: 40px;
+    }
+    }
+    
+    .hgfthffhh {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .linkschouse {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between; 
+    }
+    .linkschouse img {
+        width: 20px;
+    }
+    .fontawsemIconListToggleSmallone {
+        color: rgba(46, 121, 192, 0.63);
+        font-size: 1.1em;
+    }
+    .fontawsemIconListToggleSmallacc {
+        color: rgb(194, 194, 194);
+        font-size: 1.1em;
+    }
+    .fontawsemIconListToggleSmallqu {
+        color: rgba(192, 184, 79, 0.747);
+        font-size: 1.1em;
+    }
+    .fontawsemIconListToggleSmallzz {
+        color: rgb(37, 94, 56);
+        font-size: 1.1em;
+    }
+    .fontawsemIconListToggleSmallra {
+        color: rgb(77, 77, 77);
+        font-size: 1.1em;
+    }
+    .fontawsemIconListToggleSmallta {
+        color: orangered;
+        font-size: 1.1em;
+    }
+
+
+    .overlaye {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: fixed;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        
+    }
+    .overlaye .alerteyy {
+        width: 350px;
+        height: 500px;
+       
+         background-color: rgb(255, 255, 255);
+     
+        
+    }
+    .overlaye .alerteyy h3 {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: 500;
+       color: rgba(128, 122, 44, 0.747);
+       
+        text-align: center;
+        padding-top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .overlaye .alerteyy .btnalertee {
+       
+     width: 100%;
+     text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .btnalertee input {
+        height: 40px;
+        width: 80%;
+        border-radius: 10px;
+        border: 1px solid black;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        padding-left: 5px;
+}
+.gfhghghjgyj {
+    width: 100%;
+  
+    direction: rtl;
+}
+.buttunExClose {
+    font-size: 1.7em;
+    background-color: white;
+   border: none;
+   padding: 5px 5px;
+}

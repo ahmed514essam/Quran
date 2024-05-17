@@ -1,0 +1,24 @@
+.gfhgfhfh {
+   
+   
+    -webkit-border-radius:80% ;
+    -moz-border-radius:80% ;
+    -ms-border-radius:80% ;
+    -o-border-radius:80% ;
+    border:none;
+    bottom: 100px;
+    right:  50px;
+    transition: 2s ease;
+    -webkit-transition: 2s ease;
+    -moz-transition: 2s ease;
+    -ms-transition: 2s ease;
+    -o-transition: 2s ease;
+    position:fixed;
+}
+
+.icoArrowTopp { font-size: 3em; color: rgb(100, 90, 30); transition: .2s ease ; -webkit-transition: .2s ease ; -moz-transition: .2s ease ; -ms-transition: .2s ease ; -o-transition: .2s ease ;
+}
+.icoArrowTopp:hover {
+    font-size: 3.2em;
+    color: rgb(121, 107, 31);
+    }

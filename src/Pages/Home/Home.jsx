@@ -5,6 +5,7 @@ import SearchInput from './SearchInput/SearchInput';
 import QuranPage from './QurabPage/QuranPage';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 export default function Home() {
 const [ t , i18n ] = useTranslation();
 
@@ -64,7 +65,7 @@ const goToTalem= () => {
 
 </section>
 
-
+<ScrollToTopButton/>
     </>
   );
 }

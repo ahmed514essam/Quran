@@ -3,6 +3,7 @@ import style from "./ShowSurha.module.css";
 import surahs from "../../../surahs.json"
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ScrollToTopButton from '../../ScrollToTopButton/ScrollToTopButton';
 // Mapping object for translation
 const revelationTypes = {
   'Meccan': 'مكية',
@@ -353,6 +354,7 @@ export default function ShowSurha() {
   };
 
   return (
+    <>
     <section className={style.seconesurha}>
       <nav className="w-75 m-auto m-sm-100 border-bottom border-secondary d-flex flex-row justify-content-around align-items-center">
         <div className="d-flex justify-content-center align-items-center rounded-pill">
@@ -372,5 +374,7 @@ export default function ShowSurha() {
         ))}
       </div>
     </section>
+    <ScrollToTopButton />
+    </>
   );
 }

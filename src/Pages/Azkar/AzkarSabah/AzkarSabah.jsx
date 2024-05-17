@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./AzkarSabah.css";
 import axios from 'axios';
+import ScrollToTopButton from '../../ScrollToTopButton/ScrollToTopButton';
 
 export default function AzkarSabah() {
   const [showazkars, setShowazkars] = useState([]);
@@ -44,6 +45,7 @@ export default function AzkarSabah() {
 
 
   return (
+    <>
     <section className="sectionAzkaryAll">
 <h1>أذكار الصباح</h1>
 
@@ -60,5 +62,7 @@ export default function AzkarSabah() {
       ))}
       </div>
     </section>
+    <ScrollToTopButton />
+    </>
   );
 }

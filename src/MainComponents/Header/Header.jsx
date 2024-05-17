@@ -8,6 +8,7 @@ import {
   faBars ,
   faRadio,
   faPersonPraying,
+  faEarthAmericas,
   faMosque,
   faBookQuran,
   faEnvelope,
@@ -18,6 +19,7 @@ import {
   faGear,
   faMessage ,
 } from "@fortawesome/free-solid-svg-icons";
+import InputTy from "./InputTy/InputTy";
 
 export default function Header() {
   const [ t , i18n ] = useTranslation();
@@ -72,6 +74,9 @@ export default function Header() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
+
+{/* ============================================================== */}
+
                 <FontAwesomeIcon className="ters" icon={faGear} />
               
                 <FontAwesomeIcon className="lists" icon={faBars} />
@@ -116,6 +121,12 @@ export default function Header() {
                   <span className="space">         {t('account')} </span>
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/about">
+                  <FontAwesomeIcon className="coloriconee" icon={faMessage} />
+                    <span className="space"> {t('about')}</span>
+                  </Link>
+                </li>
                 {/* <li className="text-light nav-item dropdown ">
               <Link
                 className="linkschouse  lisstye text-light nav-link toggle "
@@ -141,16 +152,11 @@ export default function Header() {
                 </li>
              </ul>
              </li> */}
-                <li>
-                  <Link className="dropdown-item" href="#">
-                  <FontAwesomeIcon className="coloricones" icon={faGlobe} />
-                  <span className="space">  اللغة </span>
-                  </Link>
-                </li>
+              
                 <li>
                   <Link className="dropdown-item" to="/contactus">
                   <FontAwesomeIcon className="coloriconee" icon={faMessage} />
-                    <span className="space"> تواصل معنا </span>
+                    <span className="space"> {t('tosal')}  </span>
                   </Link>
                 </li>
                 <li>
@@ -168,6 +174,38 @@ export default function Header() {
               </ul>
             </li>
           </div>
+
+
+
+          <li className=" usuallye text-light nav-item dropdown ps-3">
+              <Link
+                className="linkschouse  lisstye text-light nav-link toggle "
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+
+<FontAwesomeIcon icon={faEarthAmericas} />
+              </Link>
+              <ul className="dropdown-menu">
+              
+                <li>
+                  <Link onClick={() => {
+                    i18n.changeLanguage('ar')
+                  }} className="dropdown-item" >
+                    Arabic
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => {
+                    i18n.changeLanguage('en')
+                  }} className="dropdown-item" >
+                    English
+                  </Link>
+                </li>
+             </ul>
+             </li>
+
           <button
           className="navbar-toggler collapsed ms-auto" 
           type="button"
@@ -310,17 +348,7 @@ export default function Header() {
 </span>
             </ul>
 
-            <form className=" forminput d-flex " role="search">
-            <button>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="  ماذا تريد ان تقرأ"
-                aria-label="Search"
-              />
-            </form>
+      <InputTy />
           </div>
 
 {/* ================================================================================== */}
@@ -329,6 +357,13 @@ export default function Header() {
 
         </div>
       </nav>
+
+
+
+
+
+
+
     </>
   );
 }

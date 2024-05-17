@@ -1,9 +1,11 @@
 import React from 'react'
 import sty from "./About.module.css"
 import { useTranslation } from 'react-i18next';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 export default function About() {
   const [ t , i18n ] = useTranslation();
   return (
+    <>
     <section className={sty.main}>
         <h1>{t('about')} </h1>
         <p> {t('headab')}</p>
@@ -18,5 +20,7 @@ export default function About() {
     <p> {t('sevent')}</p>   
    
     </section>
+    <ScrollToTopButton />
+    </>
   )
 }

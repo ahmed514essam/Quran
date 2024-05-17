@@ -4,6 +4,7 @@ import './Radio.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 export default function Radio() {
   const [showradios, setShowradios] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,7 +40,7 @@ export default function Radio() {
     }
   }, [loading]);
 
-  return (
+  return (<>
     <section className="sectionradios">
     <div className="container text-center">
       <h1 >اذاعة القرأن الكريم</h1>
@@ -59,5 +60,7 @@ export default function Radio() {
       </div>
     </div>
     </section>
+<ScrollToTopButton/>
+    </>
   );
 }

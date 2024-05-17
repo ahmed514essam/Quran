@@ -27,6 +27,10 @@
   justify-content: space-around;
 }
 
+
+.carde img {
+  padding-right: 0px;
+}
 @media (max-width: 683px) {
   .carde {
     width: calc(50% - 20px); 

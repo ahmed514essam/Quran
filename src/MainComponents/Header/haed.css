@@ -54,6 +54,11 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .lisstye {
     font-size: .9em;
 }
+@media only screen and (min-width: 800px) and (max-width: 99999px)  {
+   .usuallye {
+    display: none;
+   }
+     }
 .linkschouse:hover {
     color: #ffffff;
 }
@@ -298,3 +303,16 @@ height: 40px;
     color: orangered;
     font-size: 1.1em;
 }
+/* .ovra {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background-color: #f8aca3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
