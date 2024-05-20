@@ -35,7 +35,7 @@ const goToTalem= () => {
     <>
       <section className={style.sectioOne}>
         <div className={style.qeran}>
-        <img src="imges/download__1_-removebg-preview.png" class="img-fluid" alt="quran main page icon"></img>
+        <img src="imges/download__1_-removebg-preview.png" className="img-fluid" alt="quran main page icon"></img>
         </div>
        
         <div className={style.btnsmain}>
@@ -54,7 +54,7 @@ const goToTalem= () => {
 
 <section className={style.sectionTwoElHg}> 
 
-<img src="imges/pexels-photo-4346403.jpeg" class="img-fluid" alt="islamic image"></img>
+<img src="imges/pexels-photo-4346403.jpeg" className="img-fluid" alt="islamic image"></img>
 
 
 <p>

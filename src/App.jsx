@@ -21,8 +21,7 @@ import Akida from "./Pages/TalemElden/TalemCompo/Akida/Akida";
 import QuranKarim from "./Pages/TalemElden/TalemCompo/QuranKarim/QuranKarim";
 
 import ContactUs from "./Pages/ContactUs/ContactUs";
-import ProfilePage from "./Pages/Account/ProfilePage/ProfilePage";
-import RegisterTwo from "./Pages/Account/Register/RegisterTwo";
+
 import MyAcc from "./Pages/Account/MyAcc/MyAcc";
 import BookLIb from "./Pages/Account/BookLibrary/BookLIb";
 import About from "./Pages/About/About";
