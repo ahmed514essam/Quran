@@ -1,39 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import "./quran.css";
+import './quran.css';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function QuranPage() {
-  const [t , i18n] = useTranslation();
-
-
-
+  const [t, i18n] = useTranslation();
   const [soraname, setSoraame] = useState([]);
+  const navigate = useNavigate();
 
   const getFromApi = async () => {
-    const res = await fetch("http://api.alquran.cloud/v1/surah");
-    const data = await res.json();
-
-    setSoraame(data?.data || []);
-    console.log(data.data);
+    try {
+      const res = await fetch('http://api.alquran.cloud/v1/surah');
+      if (!res.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await res.json();
+      setSoraame(data?.data || []);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // You can handle the error here, e.g., display a message to the user
+    }
   };
 
   useEffect(() => {
     getFromApi();
   }, []);
-
-  const navigate = useNavigate();
-
-  // const soranam = props.soraname.map(item => {
-  //   if (i18n == 'ar'){
-  //     return ({
-  //       'id' : item.id ,
-  //   'title' : item.title.ar , 
-  //   'description' : Read.description.ar , 
-  //     });
-  //   }
-  //   });
-
 
   return (
     <>

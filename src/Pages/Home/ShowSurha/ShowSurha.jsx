@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import style from "./ShowSurha.module.css";
-import surahs from "../../../surahs.json"
+import style from './ShowSurha.module.css';
+import surahs from '../../../surahs.json';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ScrollToTopButton from '../../ScrollToTopButton/ScrollToTopButton';
-// Mapping object for translation
+
 const revelationTypes = {
-  'Meccan': 'مكية',
-  'Medinan': 'مدنية'
+  Meccan: 'مكية',
+  Medinan: 'مدنية'
 };
+
 const numberInSurah = {
   '0': '٠',
   '1': '١',
@@ -313,29 +314,33 @@ const numberInSurah = {
   '300': '٣٠٠'
 };
 
-
-
-
 export default function ShowSurha() {
-  const [ t , i18n ] = useTranslation();
+  const { t, i18n } = useTranslation();
   const { number } = useParams();
-
   const [filterItem, setFilterItem] = useState({});
   const [filayahs, setFilayahs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const handleCategoryFilter = (surnumber) => {
-      const filteredSurah = surahs.data.surahs.find((surah) => surah.number == surnumber);
-      if (filteredSurah) {
-        setFilterItem(filteredSurah);
-        setFilayahs(filteredSurah.ayahs);
+    const handleCategoryFilter = async (surnumber) => {
+      try {
+        const filteredSurah = surahs.data.surahs.find(
+          (surah) => surah.number == surnumber
+        );
+        if (filteredSurah) {
+          setFilterItem(filteredSurah);
+          setFilayahs(filteredSurah.ayahs);
+          setLoading(false);
+          setError(null);
+        } else {
+          setLoading(false);
+          setError(new Error('Surah not found'));
+        }
+      } catch (error) {
+        console.error('Error fetching surah data:', error);
         setLoading(false);
-        setError(null);
-      } else {
-        setLoading(false);
-        setError(new Error('Surah not found'));
+        setError(new Error('Failed to fetch surah data'));
       }
     };
 
@@ -355,26 +360,35 @@ export default function ShowSurha() {
 
   return (
     <>
-    <section className={style.seconesurha}>
-      <nav className="w-75 m-auto m-sm-100 border-bottom border-secondary d-flex flex-row justify-content-around align-items-center">
-        <div className="d-flex justify-content-center align-items-center rounded-pill">
-          <p className={style.lengthSurahs}>{filterItem.ayahs.length} : <span className="text-secondary">عدد الايات</span></p>
+      <section className={style.seconesurha}>
+        <nav className="w-75 m-auto m-sm-100 border-bottom border-secondary d-flex flex-row justify-content-around align-items-center">
+          <div className="d-flex justify-content-center align-items-center rounded-pill">
+            <p className={style.lengthSurahs}>
+              {filterItem.ayahs.length} :{' '}
+              <span className="text-secondary">عدد الايات</span>
+            </p>
+          </div>
+          <div>
+            <h6 className={style.nameOfSurahss}>{filterItem.name}</h6>
+          </div>
+          <div>
+            <p>{translateRevelationType(filterItem.revelationType)}</p>
+          </div>
+        </nav>
+        <h1 className={style.honebasmala}> {t('basm')} </h1>
+        <div className={style.divdatasurha}>
+          {filterItem.ayahs.map((ayah, index) => (
+            <p className={style.contetOfAyahs} key={index}>
+              {ayah.text}
+              <span className={style.numberayahs}>
+                {translateRevelationNumber(ayah.numberInSurah)}
+              </span>{' '}
+            </p>
+          ))}
         </div>
-        <div>
-          <h6 className={style.nameOfSurahss} >{filterItem.name}</h6>
-        </div>
-        <div>
-          <p>{translateRevelationType(filterItem.revelationType)}</p>
-        </div>
-      </nav>
-      <h1 className={style.honebasmala}> {t('basm')} </h1>
-      <div className={style.divdatasurha}>
-        {filterItem.ayahs.map((ayah, index) => (
-          <p className={style.contetOfAyahs} key={index}>{ayah.text}<span className={style.numberayahs}>{translateRevelationNumber(ayah.numberInSurah)}</span>   </p>
-        ))}
-      </div>
-    </section>
-    <ScrollToTopButton />
+      </section>
+      <ScrollToTopButton />
     </>
   );
 }
+
