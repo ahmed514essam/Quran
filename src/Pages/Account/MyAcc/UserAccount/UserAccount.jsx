@@ -89,7 +89,7 @@ const gotolibrary = ()=> {
 
             <div onClick={gotolibrary} className={style.contetCard}>
                 <div className={style.conImges}>
-                    <img src="/public/imges/library.avif" />
+                    <img src="imges/library.avif" />
                 </div>
                 <p>{t('mktaba')}</p>
             </div>
