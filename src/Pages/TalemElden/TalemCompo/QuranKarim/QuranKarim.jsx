@@ -14,7 +14,7 @@ export default function QuranKarim() {
     <div className="divcontentPage">
       <div class="card ">
         <img
-          src="imges/qurankariem.jpg"
+          src="/public/imges/qurankariem.jpg"
           className="cardimges card-img-top"
         />
         <div className="card-body">

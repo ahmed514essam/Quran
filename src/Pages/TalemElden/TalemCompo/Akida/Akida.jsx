@@ -14,7 +14,7 @@ export default function Akida() {
       <div className="divcontentPage">
         <div class="card ">
           <img
-            src="imges/shadatin.jpg"
+            src="/public/imges/shadatin.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -25,7 +25,7 @@ export default function Akida() {
         </div>
         <div class="card ">
           <img
-            src="imges/ayman.jpg"
+            src="/public/imges/ayman.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -36,7 +36,7 @@ export default function Akida() {
         </div>
         <div class="card ">
           <img
-            src="imges/abada.jpg"
+            src="/public/imges/abada.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">

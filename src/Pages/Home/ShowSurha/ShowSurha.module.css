@@ -53,7 +53,7 @@ padding-top: 2rem;
 }
 .contetOfAyahs {
     display: inline-block;
-    direction: ltr;
+    direction:rtl;
     line-height: 40px;
 padding-top: 0rem;
 

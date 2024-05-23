@@ -52,6 +52,7 @@ const gosectionqura = () => {
 }
 
 
+
   return (
     <footer className={styles.footer}>
       <div className={styles.end}>
@@ -95,6 +96,9 @@ const gosectionqura = () => {
           </div>
         </div>
 
+
+
+
         <div className={styles.quicklinkone}>
           <h2>Quick links</h2>
           <ul typeof="arrow">
@@ -114,6 +118,14 @@ const gosectionqura = () => {
             <li onClick={gotolibrary}> Library</li>
           </ul>
         </div>
+
+
+
+
+
+
+
+
 
         <div className={styles.divforlastinput}>
           <h2>Newsletter</h2>

@@ -15,7 +15,7 @@ export default function Abadat() {
       <div className="divcontentPage">
         <div class="card ">
           <img
-            src="imges/tahara.jpeg"
+            src="/public/imges/tahara.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -26,7 +26,7 @@ export default function Abadat() {
         </div>
         <div class="card ">
           <img
-            src="imges/saalaa.jpeg"
+            src="/public/imges/saalaa.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -37,7 +37,7 @@ export default function Abadat() {
         </div>
         <div class="card ">
           <img
-            src="imges/zakaa.jpeg"
+            src="/public/imges/zakaa.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -48,7 +48,7 @@ export default function Abadat() {
         </div>
         <div class="card ">
           <img
-            src="imges/saom.jpeg"
+            src="/public/imges/saom.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
@@ -59,7 +59,7 @@ export default function Abadat() {
         </div>
         <div class="card ">
           <img
-            src="imges/ag.jpeg"
+            src="/public/imges/ag.jpeg"
             className="cardimges card-img-top"
           />
           <div className="card-body ">
@@ -71,7 +71,7 @@ export default function Abadat() {
         </div>
         <div class="card ">
           <img
-            src="imges/die.jpg"
+            src="/public/imges/die.jpg"
             className="cardimges card-img-top"
           />
           <div className="card-body">
