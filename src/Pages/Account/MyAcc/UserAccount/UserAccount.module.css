@@ -2,7 +2,7 @@
 .sectionMain {
 
     padding-top:5rem ;
-    background-image: url(imges/saba.jpg);
+    background-image: url(/public/imges/saba.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 width: 100%;

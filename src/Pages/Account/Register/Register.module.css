@@ -113,7 +113,7 @@ margin: auto;
 text-align: center;
 display: flex;
 align-items: center;
-background-image: url(imges/saba.jpg);
+background-image: url(/public/imges/saba.jpg);
 background-size: cover;
 background-repeat: no-repeat;
   
