@@ -315,10 +315,9 @@ const numberInSurah = {
 };
 
 export default function ShowSurha() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { number } = useParams();
-  const [filterItem, setFilterItem] = useState({});
-  const [filayahs, setFilayahs] = useState([]);
+  const [filterItem, setFilterItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -326,11 +325,10 @@ export default function ShowSurha() {
     const handleCategoryFilter = async (surnumber) => {
       try {
         const filteredSurah = surahs.data.surahs.find(
-          (surah) => surah.number == surnumber
+          (surah) => surah.number === parseInt(surnumber, 10)
         );
         if (filteredSurah) {
           setFilterItem(filteredSurah);
-          setFilayahs(filteredSurah.ayahs);
           setLoading(false);
           setError(null);
         } else {
@@ -375,14 +373,14 @@ export default function ShowSurha() {
             <p>{translateRevelationType(filterItem.revelationType)}</p>
           </div>
         </nav>
-        <h1 className={style.honebasmala}> {t('basm')} </h1>
+        <h1 className={style.honebasmala}>{t('basm')}</h1>
         <div className={style.divdatasurha}>
-          {filterItem.ayahs.map((ayah, index) => (
-            <p className={style.contetOfAyahs} key={index}>
+          {filterItem.ayahs.map((ayah) => (
+            <p className={style.contetOfAyahs} key={ayah.number}>
               {ayah.text}
               <span className={style.numberayahs}>
                 {translateRevelationNumber(ayah.numberInSurah)}
-              </span>{' '}
+              </span>
             </p>
           ))}
         </div>
@@ -391,4 +389,3 @@ export default function ShowSurha() {
     </>
   );
 }
-
