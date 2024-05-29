@@ -36,7 +36,7 @@ export default function Abadat() {
         </div>
         <div className="card">
           <img
-            src="/public/imges/zakaa.jpeg"
+            src="/imges/zakaa.jpeg"
             className="cardimges card-img-top"
             alt="Zaka"
           />
@@ -69,7 +69,7 @@ export default function Abadat() {
         </div>
         <div className="card">
           <img
-            src="/public/imges/die.jpg"
+            src="/imges/die.jpg"
             className="cardimges card-img-top"
             alt="Die"
           />

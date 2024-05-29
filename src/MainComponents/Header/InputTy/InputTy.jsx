@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./InputTy.css"
+import "./InputTy.css";
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faX, faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -20,6 +20,9 @@ export default function InputTy() {
   const getFromApi = async () => {
     try {
       const res = await fetch("http://api.alquran.cloud/v1/surah");
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
       const data = await res.json();
       setSoraList(data?.data || []);
     } catch (error) {
@@ -36,23 +39,30 @@ export default function InputTy() {
   };
 
   const handleSearch = () => {
-    if (formData.text) {
-      const searchText = removeDiacritics(formData.text.toLowerCase());
-      const filtered = soraList.filter(sora => 
-        sora.englishName.toLowerCase().includes(searchText) || 
-        removeDiacritics(sora.name.toLowerCase()).includes(searchText)
-      );
-      setFilteredData(filtered);
-    } else {
-      setFilteredData([]);
+    try {
+      if (formData.text) {
+        const searchText = removeDiacritics(formData.text.toLowerCase());
+        const filtered = soraList.filter(sora => 
+          sora.englishName.toLowerCase().includes(searchText) || 
+          removeDiacritics(sora.name.toLowerCase()).includes(searchText)
+        );
+        setFilteredData(filtered);
+      } else {
+        setFilteredData([]);
+      }
+    } catch (error) {
+      console.error('Error during search:', error);
     }
   };
-const trueSearch = () => {
-  setShowSearch(true)
-}
-const cliseSearch = () => {
-  setShowSearch(false)
-}
+
+  const trueSearch = () => {
+    setShowSearch(true);
+  };
+
+  const closeSearch = () => {
+    setShowSearch(false);
+  };
+
   return (
     <>
       <form className="forminput d-flex" role="search" onSubmit={e => e.preventDefault()}>
@@ -75,7 +85,7 @@ const cliseSearch = () => {
         <div className="overlaye">
           <div className="alerteyy">
             <div className="gfhghghjgyj">
-              <button className="buttunExClose" onClick={() => setShowSearch(false)}>
+              <button className="buttunExClose" onClick={closeSearch}>
                 <FontAwesomeIcon icon={faX} />
               </button>
             </div>
@@ -89,13 +99,15 @@ const cliseSearch = () => {
                 onChange={handleChange}
               />
               <button onClick={handleSearch}>
-              <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faPlay} />
               </button>
             </div>
 
             <div className="boxSurahName">
               {filteredData.map((item, index) => (
-                <Link to={`/${item.number}`} ><button onClick={cliseSearch} key={index}> ({item.name})</button></Link>
+                <Link to={`/${item.number}`} key={index}>
+                  <button onClick={closeSearch}>({item.name})</button>
+                </Link>
               ))}
             </div>
           </div>
