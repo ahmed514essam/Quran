@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faX, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import surahs from '../../../surahs.json'; // Import surahs.json
 
 export default function InputTy() {
   const [t, i18n] = useTranslation();
@@ -17,21 +18,10 @@ export default function InputTy() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const getFromApi = async () => {
-    try {
-      const res = await fetch("http://api.alquran.cloud/v1/surah");
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const data = await res.json();
-      setSoraList(data?.data || []);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
   useEffect(() => {
-    getFromApi();
+    
+    const surahData = surahs.data.surahs;
+    setSoraList(surahData);
   }, []);
 
   const removeDiacritics = (text) => {
