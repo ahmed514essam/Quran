@@ -1,53 +1,51 @@
-import React from 'react'
-import "./Mnasbat.css"
+import React from 'react';
+import "./Mnasbat.css";
 import { useTranslation } from 'react-i18next';
+
 export default function Mnasbat() {
-  const [ t , i18n ] = useTranslation();
+  const [t, i18n] = useTranslation();
   return (
     <section className="sectionAbadatAll">
       <div className="divhead">
-        <h2>  {t('mt')}</h2>
-        <p>
-        {t('text8')} </p>      </div>
+        <h2>{t('mt')}</h2>
+        <p>{t('text8')}</p>
+      </div>
 
       <div className="divcontentPage">
-        <div class="card ">
+        <div className="card">
           <img
-            src="/public/imges/winter.jpeg"
+            src="/imges/winter.jpeg"
             className="cardimges card-img-top"
+            alt="Winter"
           />
           <div className="card-body">
-            <h3> {t('winterSay')}</h3>
-            <p className="card-text">
-            {t('text9')}
-            </p>
+            <h3>{t('winterSay')}</h3>
+            <p className="card-text">{t('text9')}</p>
           </div>
         </div>
-        <div class="card ">
+        <div className="card">
           <img
-            src="/public/imges/fun.jpg"
+            src="/imges/fun.jpg"
             className="cardimges card-img-top"
+            alt="Fun"
           />
           <div className="card-body">
-            <h3> {t('tours')}</h3>
-            <p className="card-text">
-            {t('text10')}  </p>        </div>
+            <h3>{t('tours')}</h3>
+            <p className="card-text">{t('text10')}</p>
+          </div>
         </div>
-        <div class="card ">
+        <div className="card">
           <img
-            src="/public/imges/dese.jpg"
+            src="/imges/dese.jpg"
             className="cardimges card-img-top"
+            alt="Desert"
           />
           <div className="card-body">
-            <h3> {t('amrad')}</h3>
-            <p className="card-text">
-
-            {t('text11')}  </p>        </div>
+            <h3>{t('amrad')}</h3>
+            <p className="card-text">{t('text11')}</p>
+          </div>
         </div>
-        
-     
-       
       </div>
     </section>
-  )
+  );
 }
